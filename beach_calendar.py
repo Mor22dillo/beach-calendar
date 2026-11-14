@@ -56,6 +56,7 @@ AIBVC_LINK = "https://aibvc.app/tournament/{id}"
 FIPAV_BASE = "https://media.myvolley.net/public/json/"
 FIPAV_MENU = {"assoluto": "Assoluto", "serie-beach": "Serie Beach", "societa": "Società"}
 FIPAV_LINK = "https://www.federvolley.it/campionati/beach-volley/eventi"
+FIPAV_DETTAGLIO = FIPAV_LINK + "#{stagione}/{codice}"   # scheda della singola gara
 
 GENERE = {"maschile": "M", "femminile": "F", "misto": "Misto"}
 
@@ -162,14 +163,13 @@ def aibvc_to_torneo(t: dict) -> Torneo:
 
     luogo = ", ".join(x for x in [venue.get("name"), venue.get("address"), t.get("city")] if x)
     link = AIBVC_LINK.format(id=t["_id"])
-    righe = [f"Circuito: AIBVC {cat}", f"Genere: {gen}"]
+    righe = [f"🔗 Dettaglio torneo: {link}", "", f"Circuito: AIBVC {cat}", f"Genere: {gen}"]
     if t.get("ageCategory") and t["ageCategory"] != "open":
         righe.append(f"Categoria età: {t['ageCategory']}")
     if t.get("entryFee") is not None:
         righe.append(f"Quota: {t['entryFee']} € / coppia")
     if t.get("registrationDeadline"):
         righe.append("Scadenza iscrizioni: " + fmt_dt(parse_iso(t["registrationDeadline"])))
-    righe.append(f"Dettagli: {link}")
 
     return Torneo(
         key=f"aibvc:{t['_id']}",
@@ -196,7 +196,8 @@ def fetch_fipav(zona: str, oggi: dt.date) -> list[Torneo]:
             serie = (j.get("beach_volley") or {}).get("serie") or {}
             for per_genere in serie.values():
                 for gruppo in per_genere.values():
-                    eventi.extend(gruppo.get("codici", []))
+                    for e in gruppo.get("codici", []):
+                        eventi.append(dict(e, _stagione=stagione))
 
     # Tieni solo categorie richieste, zona scelta, da oggi in poi
     eventi = [e for e in eventi
@@ -251,14 +252,22 @@ def fipav_to_torneo(gruppo: list[dict]) -> Torneo:
     if citta:
         titolo += f" · {citta}"
 
-    righe = [f"Circuito: FIPAV – {sezione}", "Categorie: " + ", ".join(categorie)]
+    def link_gara(e):
+        return FIPAV_DETTAGLIO.format(stagione=e.get("_stagione", ""), codice=e.get("codice", ""))
+    gare = sorted(gruppo, key=lambda e: (short_tipologia(e.get("tipologia", "")), e.get("genere", "")))
+    link = link_gara(gare[0])
+
+    righe = ["🔗 Dettaglio tappa:"]
+    for e in gare:
+        righe.append(f"• {etichetta(short_tipologia(e.get('tipologia', '')), {(e.get('genere') or '?')[0].upper()})}: {link_gara(e)}")
+    righe += ["", f"Circuito: FIPAV – {sezione}", "Categorie: " + ", ".join(categorie)]
     if club:
         righe.append(f"Organizzatore: {club}")
+    if comune:
+        righe.append(f"Località: {comune}")
     mp = [e.get("montepremi") for e in gruppo if e.get("montepremi_valore")]
     if mp:
         righe.append("Montepremi: " + ", ".join(sorted(set(mp))))
-    righe.append("Codici: " + ", ".join(sorted(e.get("codice", "") for e in gruppo)))
-    righe.append(f"Elenco eventi: {FIPAV_LINK}")
 
     key_src = f"{e0['data_inizio_iso']}|{e0.get('club_id')}|{e0.get('location_id')}|{e0['menu_eventi']}"
     return Torneo(
@@ -266,7 +275,7 @@ def fipav_to_torneo(gruppo: list[dict]) -> Torneo:
         titolo=titolo,
         inizio=inizio, fine=fine,
         luogo=f"{club}, {comune}" if club else comune,
-        descrizione="\n".join(righe), link=FIPAV_LINK, fonte="fipav",
+        descrizione="\n".join(righe), link=link, fonte="fipav",
         riga_telegram=(f"{fmt_giorno(inizio)} · <b>FIPAV {sezione}</b> · {html.escape(', '.join(categorie))}"
                        + (f" · {html.escape(club)}" if club else "")
                        + (f" · 📍{html.escape(citta)}" if citta else "")),
