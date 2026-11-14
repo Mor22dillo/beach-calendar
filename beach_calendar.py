@@ -493,6 +493,7 @@ def build_pagina(state: dict, zona: str, now: dt.datetime) -> str:
     js = json.dumps(dati, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     return (PAGINA_HTML.replace("__ZONA_TITOLO__", titolo)
             .replace("__AGGIORNATO__", now.strftime("%d/%m/%Y alle %H:%M"))
+            .replace("__REPO__", os.environ.get("GITHUB_REPOSITORY", ""))
             .replace("__DATI__", js))
 
 
@@ -566,6 +567,20 @@ PAGINA_HTML = r"""<!DOCTYPE html>
   .links a.g-F { color: var(--f); border-color: var(--f-line); background: var(--f-bg); }
   .links a.g-M { color: var(--m); border-color: var(--m-line); background: var(--m-bg); }
   .links a:hover { filter: brightness(.95); }
+  header .wrap { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; }
+  .agg { flex: none; font: inherit; font-size: 13px; font-weight: 600; color: #fff; background: rgba(255,255,255,.16);
+         border: 1px solid rgba(255,255,255,.35); border-radius: 10px; padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+  .agg:disabled { opacity: .6; cursor: default; }
+  .panel { background: #fff; color: var(--ink); border-radius: 12px; padding: 14px; margin-top: 12px; font-size: 14px; display: none; }
+  .panel.on { display: block; }
+  .panel p { margin: 0 0 10px; }
+  .panel input { width: 100%; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; }
+  .panel .btns { display: flex; flex-wrap: wrap; gap: 8px; }
+  .panel button, .panel a.btn { font: inherit; font-size: 13px; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--sea);
+         background: var(--sea); color: #fff; cursor: pointer; text-decoration: none; }
+  .panel .ghost { background: #fff; color: var(--sea); }
+  .panel small { color: var(--muted); display: block; margin-top: 8px; }
+  .stato { font-size: 13px; margin-top: 8px; opacity: .95; min-height: 1em; }
   .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
   footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 30px; }
   footer a { color: var(--muted); }
@@ -577,9 +592,27 @@ PAGINA_HTML = r"""<!DOCTYPE html>
 </style>
 </head>
 <body>
-<header><div class="wrap">
-  <h1>🏐 Tornei beach volley __ZONA_TITOLO__</h1>
-  <div class="sub">AIBVC (L1, L2, CNT) e FIPAV (Assoluto, Serie Beach, Società) · aggiornato il __AGGIORNATO__</div>
+<header><div style="max-width:980px;margin:0 auto">
+  <div class="wrap">
+    <div>
+      <h1>🏐 Tornei beach volley __ZONA_TITOLO__</h1>
+      <div class="sub">AIBVC (L1, L2, CNT) e FIPAV (Assoluto, Serie Beach, Società) · aggiornato il __AGGIORNATO__</div>
+    </div>
+    <button class="agg" id="agg">🔄 Aggiorna ora</button>
+  </div>
+  <div class="stato" id="stato"></div>
+  <div class="panel" id="panel">
+    <p><b>Aggiornamento manuale</b></p>
+    <p>Per avviarlo da qui con un tocco, incolla una volta il tuo <i>token GitHub</i> (resta salvato solo su questo dispositivo).
+       In alternativa apri GitHub e premi <b>Run workflow</b>.</p>
+    <input type="password" id="tok" placeholder="github_pat_…" autocomplete="off">
+    <div class="btns">
+      <button id="salvaTok">Salva e aggiorna</button>
+      <a class="btn ghost" id="apriGh" target="_blank" rel="noopener">Apri GitHub</a>
+      <button class="ghost" id="chiudi">Chiudi</button>
+    </div>
+    <small id="tokInfo"></small>
+  </div>
 </div></header>
 
 <main>
@@ -760,6 +793,86 @@ function render() {
   }
 }
 syncInputs(); render();
+
+// --- Aggiornamento manuale (avvia il workflow GitHub "sync.yml") ----------------
+(function () {
+  let repo = "__REPO__";
+  if (!repo && location.hostname.endsWith(".github.io"))
+    repo = location.hostname.split(".")[0] + "/" + (location.pathname.split("/")[1] || "");
+  const API = "https://api.github.com/repos/" + repo + "/actions";
+  const WF = "sync.yml";
+  const ghLink = "https://github.com/" + repo + "/actions/workflows/" + WF;
+  const btn = $("agg"), stato = $("stato"), panel = $("panel");
+  $("apriGh").href = ghLink;
+  if (!repo) { btn.style.display = "none"; return; }
+
+  const getTok = () => { try { return localStorage.getItem("bv-token") || ""; } catch (e) { return ""; } };
+  const setTok = t => { try { t ? localStorage.setItem("bv-token", t) : localStorage.removeItem("bv-token"); } catch (e) {} };
+  const say = t => { stato.textContent = t; };
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+  function apriPannello(msg) {
+    $("tokInfo").innerHTML = msg || (getTok() ? 'Token salvato su questo dispositivo. <a href="#" id="dimentica">Rimuovilo</a>' : "");
+    const d = document.getElementById("dimentica");
+    if (d) d.onclick = e => { e.preventDefault(); setTok(""); apriPannello("Token rimosso."); };
+    panel.classList.add("on");
+  }
+  $("chiudi").onclick = () => panel.classList.remove("on");
+  $("salvaTok").onclick = () => {
+    const t = $("tok").value.trim();
+    if (!t) { apriPannello("Incolla il token oppure usa “Apri GitHub”."); return; }
+    setTok(t); $("tok").value = ""; panel.classList.remove("on"); avvia();
+  };
+  btn.onclick = () => getTok() ? avvia() : apriPannello();
+
+  async function avvia() {
+    const tok = getTok();
+    const h = { "Accept": "application/vnd.github+json", "Authorization": "Bearer " + tok, "X-GitHub-Api-Version": "2022-11-28" };
+    btn.disabled = true; say("Avvio dell'aggiornamento…");
+    const t0 = new Date(Date.now() - 60000).toISOString();
+    try {
+      const r = await fetch(`${API}/workflows/${WF}/dispatches`, { method: "POST", headers: h, body: JSON.stringify({ ref: "main" }) });
+      if (r.status === 401 || r.status === 403 || r.status === 404) {
+        btn.disabled = false; say(""); setTok("");
+        apriPannello("Il token non è valido o non ha il permesso “Actions: Read and write” su questo repository. Incollane uno nuovo oppure usa “Apri GitHub”.");
+        return;
+      }
+      if (!r.ok) throw new Error("risposta " + r.status);
+      say("Aggiornamento avviato: controllo dei siti AIBVC e FIPAV in corso (circa 1 minuto)…");
+      // segue l'esecuzione fino alla fine
+      let run = null;
+      for (let i = 0; i < 40; i++) {
+        await sleep(i ? 8000 : 5000);
+        const q = await fetch(`${API}/workflows/${WF}/runs?event=workflow_dispatch&per_page=5&created=%3E%3D${encodeURIComponent(t0)}`, { headers: h });
+        if (!q.ok) continue;
+        run = ((await q.json()).workflow_runs || [])[0];
+        if (run && run.status === "completed") break;
+      }
+      if (!run || run.status !== "completed") { say("L'aggiornamento è ancora in corso. Ricarica la pagina tra qualche minuto."); btn.disabled = false; return; }
+      if (run.conclusion !== "success") {
+        say("L'aggiornamento non è riuscito. "); const a = document.createElement("a");
+        a.href = run.html_url; a.target = "_blank"; a.textContent = "Vedi i dettagli su GitHub"; a.style.color = "#fff";
+        stato.appendChild(a); btn.disabled = false; return;
+      }
+      // attende che GitHub Pages pubblichi la nuova versione della pagina
+      say("Fatto! Le eventuali novità arrivano su Telegram. Pubblico la pagina aggiornata…");
+      const vecchia = "__AGGIORNATO__";
+      for (let i = 0; i < 24; i++) {
+        await sleep(10000);
+        try {
+          const txt = await (await fetch(location.pathname + "?v=" + Date.now(), { cache: "no-store" })).text();
+          const m = txt.match(/aggiornato il ([^<]+)<\/div>/);
+          if (m && m[1].trim() !== vecchia) { location.replace(location.pathname + "?v=" + Date.now()); return; }
+        } catch (e) {}
+      }
+      say("Aggiornamento completato. Se la pagina non è cambiata, ricaricala tra un minuto.");
+      btn.disabled = false;
+    } catch (e) {
+      say("Impossibile avviare l'aggiornamento (" + e.message + "). Prova da GitHub.");
+      apriPannello(); btn.disabled = false;
+    }
+  }
+})();
 </script>
 </body>
 </html>
