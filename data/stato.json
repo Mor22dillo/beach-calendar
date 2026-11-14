@@ -19,6 +19,7 @@
     "indirizzo": "Via del Fosso di Dragoncello, 201",
     "links": [
      {
+      "genere": "F",
       "label": "Dettaglio torneo",
       "url": "https://aibvc.app/tournament/6abbae7c5748aace3da89947"
      }
@@ -52,6 +53,7 @@
     "indirizzo": "Via del Fosso di Dragoncello, 201",
     "links": [
      {
+      "genere": "M",
       "label": "Dettaglio torneo",
       "url": "https://aibvc.app/tournament/6abbaee35748aace3da89a66"
      }
@@ -85,6 +87,7 @@
     "indirizzo": "Via Martiri Della Storta, 40",
     "links": [
      {
+      "genere": "M",
       "label": "Dettaglio torneo",
       "url": "https://aibvc.app/tournament/6ad5dc5b352fd41bfd6a3a95"
      }
@@ -118,6 +121,7 @@
     "indirizzo": "Via Martiri Della Storta, 40",
     "links": [
      {
+      "genere": "F",
       "label": "Dettaglio torneo",
       "url": "https://aibvc.app/tournament/6ad5dc61352fd41bfd6a3d42"
      }
@@ -152,10 +156,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12653"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12652"
      }
@@ -192,34 +198,42 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Under 14 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12514"
      },
      {
+      "genere": "M",
       "label": "Under 14 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12515"
      },
      {
+      "genere": "F",
       "label": "Under 16 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12516"
      },
      {
+      "genere": "M",
       "label": "Under 16 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12557"
      },
      {
+      "genere": "F",
       "label": "Under 18 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12518"
      },
      {
+      "genere": "M",
       "label": "Under 18 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12519"
      },
      {
+      "genere": "F",
       "label": "Under 20 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12520"
      },
      {
+      "genere": "M",
       "label": "Under 20 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12521"
      }
@@ -253,10 +267,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12584"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12585"
      }
@@ -292,14 +308,17 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Master 35 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12573"
      },
      {
+      "genere": "M",
       "label": "Master 45 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12574"
      },
      {
+      "genere": "M",
       "label": "Master 55 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12575"
      }
@@ -334,14 +353,17 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Gold F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12564"
      },
      {
+      "genere": "M",
       "label": "Gold M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12563"
      },
      {
+      "genere": "F",
       "label": "Master 35 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12560"
      }
@@ -375,10 +397,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12607"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12606"
      }
@@ -412,10 +436,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12580"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12581"
      }
@@ -449,10 +475,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12569"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12570"
      }
@@ -486,10 +514,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12588"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12589"
      }
@@ -523,10 +553,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Gold F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12696"
      },
      {
+      "genere": "M",
       "label": "Gold M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12695"
      }
@@ -560,10 +592,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Bronze F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12591"
      },
      {
+      "genere": "M",
       "label": "Bronze M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12592"
      }
@@ -597,10 +631,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12649"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12648"
      }
@@ -634,10 +670,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12525"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12526"
      }
@@ -671,10 +709,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12609"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12608"
      }
@@ -708,10 +748,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Bronze F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12500"
      },
      {
+      "genere": "M",
       "label": "Bronze M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12501"
      }
@@ -748,34 +790,42 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Under 14 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12613"
      },
      {
+      "genere": "M",
       "label": "Under 14 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12612"
      },
      {
+      "genere": "F",
       "label": "Under 16 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12614"
      },
      {
+      "genere": "M",
       "label": "Under 16 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12615"
      },
      {
+      "genere": "F",
       "label": "Under 18 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12617"
      },
      {
+      "genere": "M",
       "label": "Under 18 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12616"
      },
      {
+      "genere": "F",
       "label": "Under 20 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12618"
      },
      {
+      "genere": "M",
       "label": "Under 20 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12619"
      }
@@ -809,10 +859,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12528"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12527"
      }
@@ -846,10 +898,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Bronze F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12577"
      },
      {
+      "genere": "M",
       "label": "Bronze M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12576"
      }
@@ -883,10 +937,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12699"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12700"
      }
@@ -920,10 +976,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Bronze F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12572"
      },
      {
+      "genere": "M",
       "label": "Bronze M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12571"
      }
@@ -957,10 +1015,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Bronze F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12524"
      },
      {
+      "genere": "M",
       "label": "Bronze M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12523"
      }
@@ -994,10 +1054,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12611"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12610"
      }
@@ -1031,10 +1093,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Bronze F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12568"
      },
      {
+      "genere": "M",
       "label": "Bronze M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12567"
      }
@@ -1068,10 +1132,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Gold F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12583"
      },
      {
+      "genere": "M",
       "label": "Gold M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12582"
      }
@@ -1108,22 +1174,27 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Gold F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12593"
      },
      {
+      "genere": "M",
       "label": "Gold M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12594"
      },
      {
+      "genere": "F",
       "label": "Master 35 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12595"
      },
      {
+      "genere": "M",
       "label": "Master 45 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12596"
      },
      {
+      "genere": "M",
       "label": "Master 55 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12597"
      }
@@ -1158,10 +1229,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Master 35 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12650"
      },
      {
+      "genere": "M",
       "label": "Master 45 M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12651"
      }
@@ -1195,10 +1268,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12510"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12511"
      }
@@ -1232,10 +1307,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Bronze F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12579"
      },
      {
+      "genere": "M",
       "label": "Bronze M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12578"
      }
@@ -1269,10 +1346,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12708"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12707"
      }
@@ -1306,10 +1385,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Beginners F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12565"
      },
      {
+      "genere": "M",
       "label": "Beginners M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12566"
      }
@@ -1343,10 +1424,12 @@
     "indirizzo": "",
     "links": [
      {
+      "genere": "F",
       "label": "Silver F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
      },
      {
+      "genere": "M",
       "label": "Silver M",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12419"
      }
@@ -1361,5 +1444,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-14T23:09+01:00"
+ "ultimo_controllo": "2026-11-14T23:20+01:00"
 }
