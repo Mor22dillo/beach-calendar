@@ -73,6 +73,7 @@ class Torneo:
     riga_telegram: str          # testo breve per la notifica
     fonte: str                  # "aibvc" / "fipav"
     impronta: dict = field(default_factory=dict)
+    info: dict = field(default_factory=dict)   # dati strutturati per la pagina riepilogo
 
     @property
     def tutto_il_giorno(self) -> bool:
@@ -179,6 +180,15 @@ def aibvc_to_torneo(t: dict) -> Torneo:
         riga_telegram=(f"{fmt_giorno(inizio)} · <b>AIBVC {cat} {gen}</b> · {html.escape(nome)}"
                        + (f" · 📍{html.escape(citta)}" if citta else "")),
         impronta={"t": titolo, "s": inizio, "e": fine, "l": luogo},
+        info={
+            "fonte": "AIBVC", "circuito": "CNT" if t.get("tourType") == "cnt" else t.get("level", ""),
+            "nome": nome, "categorie": [f"{cat}".strip()], "generi": [gen] if gen else [],
+            "citta": re.sub(r"\s*\(.*?\)\s*", "", t.get("city") or "").strip(),
+            "impianto": venue.get("name") or "", "indirizzo": venue.get("address") or "",
+            "quota": t.get("entryFee"), "sospeso": bool(sospeso),
+            "scadenza": parse_iso(t["registrationDeadline"]).isoformat() if t.get("registrationDeadline") else None,
+            "links": [{"label": "Dettaglio torneo", "url": link}],
+        },
     )
 
 
@@ -280,6 +290,14 @@ def fipav_to_torneo(gruppo: list[dict]) -> Torneo:
                        + (f" · {html.escape(club)}" if club else "")
                        + (f" · 📍{html.escape(citta)}" if citta else "")),
         impronta={"t": titolo, "s": inizio, "e": fine, "c": categorie},
+        info={
+            "fonte": "FIPAV", "circuito": sezione, "nome": club or sezione, "categorie": categorie,
+            "generi": sorted({(e.get("genere") or "?")[0].upper() for e in gruppo}),
+            "citta": comune, "provincia": (e0.get("provincia") or "").title(),
+            "impianto": "", "indirizzo": "", "organizzatore": club,
+            "links": [{"label": etichetta(short_tipologia(e.get("tipologia", "")), {(e.get("genere") or "?")[0].upper()}),
+                       "url": link_gara(e)} for e in gare],
+        },
     )
 
 
@@ -398,7 +416,7 @@ def torneo_record(t: Torneo) -> dict:
     return {
         "summary": t.titolo, "location": t.luogo, "description": t.descrizione, "url": t.link,
         "all_day": t.tutto_il_giorno, "start": t.inizio.isoformat(), "end": t.fine.isoformat(),
-        "hash": t.hash,
+        "hash": t.hash, "info": t.info,
     }
 
 
@@ -466,6 +484,268 @@ def build_ics(state: dict, nome: str) -> str:
                   "TRANSP:TRANSPARENT", "END:VEVENT"]
     righe.append("END:VCALENDAR")
     return "\r\n".join(_ics_fold(l) for l in righe) + "\r\n"
+
+
+# --- Pagina riepilogo con filtri (docs/index.html) ---------------------------
+def build_pagina(state: dict, zona: str, now: dt.datetime) -> str:
+    titolo = {"comune": "a Roma", "provincia": "in provincia di Roma", "regione": "nel Lazio"}.get(zona, "")
+    dati = [r for r in state.get("eventi", {}).values() if r.get("info")]
+    js = json.dumps(dati, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    return (PAGINA_HTML.replace("__ZONA_TITOLO__", titolo)
+            .replace("__AGGIORNATO__", now.strftime("%d/%m/%Y alle %H:%M"))
+            .replace("__DATI__", js))
+
+
+PAGINA_HTML = r"""<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tornei beach volley __ZONA_TITOLO__</title>
+<style>
+  :root {
+    --sand: #f6f1e7; --card: #ffffff; --ink: #1d2a33; --muted: #6b7780; --line: #e6dfd1;
+    --sea: #0e6f8f; --sea-soft: #e3f1f5;
+    --aibvc: #0e6f8f; --fipav: #c4532b; --fipav-soft: #fbe9e2;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         background: var(--sand); color: var(--ink); font-size: 15px; line-height: 1.4; }
+  header { background: linear-gradient(135deg, #0e6f8f, #13506a); color: #fff; padding: 22px 18px 18px; }
+  header .wrap, main { max-width: 980px; margin: 0 auto; }
+  h1 { margin: 0; font-size: 22px; letter-spacing: -.01em; }
+  .sub { opacity: .85; font-size: 13px; margin-top: 4px; }
+  main { padding: 14px 14px 60px; }
+
+  .filters { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+             padding: 14px; margin-top: -10px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,.05); }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+  .row:last-child { margin-bottom: 0; }
+  .lbl { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; min-width: 72px; }
+  input[type=search], input[type=date], select {
+    font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); }
+  input[type=search] { flex: 1; min-width: 200px; }
+  .chip { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
+          background: #fff; color: var(--ink); cursor: pointer; user-select: none; }
+  .chip[aria-pressed=true] { background: var(--sea); border-color: var(--sea); color: #fff; }
+  .chip.fipav[aria-pressed=true] { background: var(--fipav); border-color: var(--fipav); }
+  .reset { margin-left: auto; background: none; border: none; color: var(--sea); font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; }
+  .count { margin: 16px 2px 6px; color: var(--muted); font-size: 13px; }
+
+  .month { margin: 22px 2px 8px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .card { display: flex; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+          padding: 12px 14px; margin-bottom: 8px; }
+  .card.past { opacity: .55; }
+  .date { flex: 0 0 54px; text-align: center; border-right: 1px solid var(--line); padding-right: 12px; }
+  .date .d { font-size: 24px; font-weight: 700; line-height: 1; }
+  .date .w { font-size: 12px; color: var(--muted); text-transform: uppercase; margin-top: 3px; }
+  .date .t { font-size: 12px; color: var(--sea); font-weight: 600; margin-top: 4px; }
+  .body { flex: 1; min-width: 0; }
+  .top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 4px; }
+  .badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: var(--sea-soft); color: var(--aibvc); }
+  .badge.fipav { background: var(--fipav-soft); color: var(--fipav); }
+  .badge.warn { background: #fde2e2; color: #b42318; }
+  .name { font-weight: 650; font-size: 16px; }
+  .cats { font-size: 13px; color: var(--ink); margin-top: 2px; }
+  .where { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .links a { font-size: 12px; text-decoration: none; color: var(--sea); border: 1px solid #b9dbe5; border-radius: 8px; padding: 4px 9px; background: #f6fbfc; }
+  .card.f .links a { color: var(--fipav); border-color: #f0c9b9; background: #fff8f5; }
+  .links a:hover { filter: brightness(.95); }
+  .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 30px; }
+  footer a { color: var(--muted); }
+  @media (max-width: 560px) {
+    .lbl { min-width: 100%; }
+    .date { flex-basis: 46px; padding-right: 10px; }
+    .name { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>🏐 Tornei beach volley __ZONA_TITOLO__</h1>
+  <div class="sub">AIBVC (L1, L2, CNT) e FIPAV (Assoluto, Serie Beach, Società) · aggiornato il __AGGIORNATO__</div>
+</div></header>
+
+<main>
+  <section class="filters" aria-label="Filtri">
+    <div class="row">
+      <input type="search" id="q" placeholder="Cerca impianto, città, organizzatore, categoria…" aria-label="Cerca">
+    </div>
+    <div class="row" id="periodo">
+      <span class="lbl">Periodo</span>
+      <button class="chip" data-p="7">7 giorni</button>
+      <button class="chip" data-p="30">30 giorni</button>
+      <button class="chip" data-p="90">3 mesi</button>
+      <button class="chip" data-p="all">Tutti i prossimi</button>
+      <button class="chip" data-p="weekend">Prossimo weekend</button>
+      <span style="display:flex;gap:6px;align-items:center">
+        <input type="date" id="dal" aria-label="Dal"> – <input type="date" id="al" aria-label="Al">
+      </span>
+    </div>
+    <div class="row" id="circuiti"><span class="lbl">Circuito</span></div>
+    <div class="row" id="generi"><span class="lbl">Genere</span></div>
+    <div class="row">
+      <span class="lbl">Città</span>
+      <select id="citta"><option value="">Tutte</option></select>
+      <button class="reset" id="reset">Azzera filtri</button>
+    </div>
+  </section>
+
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+  <footer>Fonti: <a href="https://aibvc.app/" target="_blank" rel="noopener">aibvc.app</a> ·
+    <a href="https://www.federvolley.it/campionati/beach-volley/eventi" target="_blank" rel="noopener">federvolley.it</a></footer>
+</main>
+
+<script>
+const DATI = __DATI__;
+const OGGI = new Date(); OGGI.setHours(0,0,0,0);
+const GIORNI = ["dom","lun","mar","mer","gio","ven","sab"];
+const MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+const CIRCUITI = [
+  ["AIBVC","L1","AIBVC L1"],["AIBVC","L2","AIBVC L2"],["AIBVC","CNT","AIBVC CNT"],
+  ["FIPAV","Assoluto","FIPAV Assoluto"],["FIPAV","Serie Beach","FIPAV Serie Beach"],["FIPAV","Società","FIPAV Società"]];
+const GENERI = [["M","Maschile"],["F","Femminile"]];
+
+// Normalizza i dati
+const T = DATI.map(r => {
+  const i = r.info || {};
+  const s = r.all_day ? new Date(r.start + "T00:00:00") : new Date(r.start);
+  const eExcl = r.all_day ? new Date(r.end + "T00:00:00") : new Date(r.end);
+  const e = r.all_day ? new Date(eExcl.getTime() - 86400000) : eExcl;
+  const cKey = (i.fonte || "") + "|" + (i.circuito || "");
+  const testo = [i.nome, i.citta, i.impianto, i.indirizzo, i.organizzatore, (i.categorie||[]).join(" "), i.fonte, i.circuito, r.summary]
+      .filter(Boolean).join(" ").toLowerCase();
+  return { r, i, s, e, cKey, testo };
+}).sort((a,b) => a.s - b.s);
+
+// --- stato filtri (ricordato nel browser, se possibile)
+const DEF = { q:"", p:"all", dal:"", al:"", circ:[], gen:[], citta:"" };
+let F = { ...DEF };
+try { F = { ...DEF, ...JSON.parse(localStorage.getItem("bv-filtri") || "{}") }; } catch (e) {}
+const salva = () => { try { localStorage.setItem("bv-filtri", JSON.stringify(F)); } catch (e) {} };
+
+// --- costruzione controlli
+const $ = id => document.getElementById(id);
+function chip(parent, label, pressed, onClick, extra) {
+  const b = document.createElement("button");
+  b.className = "chip" + (extra ? " " + extra : ""); b.textContent = label;
+  b.setAttribute("aria-pressed", pressed ? "true" : "false");
+  b.onclick = () => { onClick(); render(); };
+  parent.appendChild(b); return b;
+}
+function buildChips() {
+  const c = $("circuiti"); c.querySelectorAll(".chip").forEach(x => x.remove());
+  const presenti = new Set(T.map(t => t.cKey));
+  CIRCUITI.filter(([f,k]) => presenti.has(f+"|"+k)).forEach(([f,k,l]) => {
+    const key = f+"|"+k;
+    chip(c, l, F.circ.includes(key), () => {
+      F.circ = F.circ.includes(key) ? F.circ.filter(x => x !== key) : [...F.circ, key];
+    }, f === "FIPAV" ? "fipav" : "");
+  });
+  const g = $("generi"); g.querySelectorAll(".chip").forEach(x => x.remove());
+  GENERI.forEach(([k,l]) => chip(g, l, F.gen.includes(k), () => {
+    F.gen = F.gen.includes(k) ? F.gen.filter(x => x !== k) : [...F.gen, k];
+  }));
+  document.querySelectorAll("#periodo .chip").forEach(b =>
+    b.setAttribute("aria-pressed", (!F.dal && !F.al && F.p === b.dataset.p) ? "true" : "false"));
+}
+const citta = [...new Set(T.map(t => t.i.citta).filter(Boolean))].sort((a,b) => a.localeCompare(b, "it"));
+citta.forEach(c => { const o = document.createElement("option"); o.value = o.textContent = c; $("citta").appendChild(o); });
+
+document.querySelectorAll("#periodo .chip").forEach(b => b.onclick = () => {
+  F.p = b.dataset.p; F.dal = ""; F.al = ""; $("dal").value = ""; $("al").value = ""; render();
+});
+$("q").oninput = e => { F.q = e.target.value; render(); };
+$("dal").onchange = e => { F.dal = e.target.value; render(); };
+$("al").onchange = e => { F.al = e.target.value; render(); };
+$("citta").onchange = e => { F.citta = e.target.value; render(); };
+$("reset").onclick = () => { F = { ...DEF, circ: [], gen: [] }; syncInputs(); render(); };
+function syncInputs() { $("q").value = F.q; $("dal").value = F.dal; $("al").value = F.al;
+  $("citta").value = citta.includes(F.citta) ? F.citta : ""; }
+
+// --- periodo
+function intervallo() {
+  if (F.dal || F.al) {
+    return [F.dal ? new Date(F.dal + "T00:00:00") : new Date(0), F.al ? new Date(F.al + "T23:59:59") : new Date(8.64e15)];
+  }
+  const da = new Date(OGGI);
+  if (F.p === "weekend") {
+    const d = OGGI.getDay();                       // 0 = domenica, 6 = sabato
+    const inizio = new Date(OGGI);
+    if (d !== 0 && d !== 6) inizio.setDate(OGGI.getDate() + (6 - d));   // prossimo sabato
+    const fine = new Date(inizio);
+    if (inizio.getDay() === 6) fine.setDate(inizio.getDate() + 1);       // fino a domenica
+    fine.setHours(23,59,59);
+    return [inizio, fine];
+  }
+  if (F.p === "all") return [da, new Date(8.64e15)];
+  const a = new Date(OGGI); a.setDate(a.getDate() + Number(F.p)); a.setHours(23,59,59);
+  return [da, a];
+}
+
+// --- render
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+const hhmm = d => d.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
+function render() {
+  salva(); buildChips();
+  const [da, a] = intervallo();
+  const q = F.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const out = T.filter(t =>
+    t.e >= da && t.s <= a &&
+    (!F.circ.length || F.circ.includes(t.cKey)) &&
+    (!F.gen.length || (t.i.generi || []).some(g => F.gen.includes(g))) &&
+    (!F.citta || t.i.citta === F.citta) &&
+    q.every(w => t.testo.includes(w)));
+
+  $("count").textContent = out.length === 1 ? "1 torneo" : out.length + " tornei";
+  const list = $("list"); list.innerHTML = "";
+  if (!out.length) { list.innerHTML = '<div class="empty">Nessun torneo con questi filtri.</div>'; return; }
+
+  let mese = "";
+  for (const t of out) {
+    const m = MESI[t.s.getMonth()] + " " + t.s.getFullYear();
+    if (m !== mese) { mese = m; list.insertAdjacentHTML("beforeend", `<div class="month">${m}</div>`); }
+    const i = t.i, f = i.fonte === "FIPAV";
+    const multi = t.e.toDateString() !== t.s.toDateString();
+    const dove = [i.impianto, i.indirizzo, i.citta && (i.provincia && i.provincia !== i.citta ? `${i.citta} (${i.provincia})` : i.citta)]
+                 .filter(Boolean).join(" · ");
+    const links = (i.links || [{ label: "Dettaglio", url: t.r.url }])
+                 .map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">🔗 ${esc(l.label)}</a>`).join("");
+    const extra = [];
+    if (i.quota != null) extra.push(`${i.quota} € / coppia`);
+    if (i.scadenza) { const sc = new Date(i.scadenza);
+      extra.push(`iscrizioni entro ${sc.getDate()}/${sc.getMonth()+1} ore ${hhmm(sc)}`); }
+    list.insertAdjacentHTML("beforeend", `
+      <article class="card ${f ? "f" : ""} ${t.e < OGGI ? "past" : ""}">
+        <div class="date">
+          <div class="d">${t.s.getDate()}</div>
+          <div class="w">${GIORNI[t.s.getDay()]}${multi ? "–" + GIORNI[t.e.getDay()] : ""}</div>
+          ${t.r.all_day ? "" : `<div class="t">${hhmm(t.s)}</div>`}
+        </div>
+        <div class="body">
+          <div class="top">
+            <span class="badge ${f ? "fipav" : ""}">${esc(i.fonte || "")} ${esc(i.circuito || "")}</span>
+            ${(i.generi || []).map(g => `<span class="badge ${f ? "fipav" : ""}">${g}</span>`).join("")}
+            ${i.sospeso ? '<span class="badge warn">SOSPESO</span>' : ""}
+          </div>
+          <div class="name">${esc(i.nome || t.r.summary)}</div>
+          ${f ? `<div class="cats">${esc((i.categorie || []).join(", "))}</div>` : ""}
+          <div class="where">📍 ${esc(dove || t.r.location)}</div>
+          ${extra.length ? `<div class="where">${esc(extra.join(" · "))}</div>` : ""}
+          <div class="links">${links}</div>
+        </div>
+      </article>`);
+  }
+}
+syncInputs(); render();
+</script>
+</body>
+</html>
+"""
 
 
 # --- Telegram -----------------------------------------------------------------
@@ -549,6 +829,9 @@ def main() -> int:
                 f.write(build_ics(state, os.environ.get("NOME_CALENDARIO", "Beach volley Roma")))
             with open(state_path, "w", encoding="utf-8") as f:
                 json.dump(state, f, ensure_ascii=False, indent=1, sort_keys=True)
+            pagina = os.path.join(os.path.dirname(ics_path) or ".", "index.html")
+            with open(pagina, "w", encoding="utf-8") as f:
+                f.write(build_pagina(state, zona, now))
         cal_link = os.environ.get("LINK_CALENDARIO") or None
     else:
         sa_json = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON")
