@@ -1,0 +1,355 @@
+{
+ "eventi": {
+  "aibvc:6abbae7c5748aace3da89947": {
+   "all_day": false,
+   "description": "Circuito: AIBVC CNT L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 13/11/2026 12:00\nDettagli: https://aibvc.app/tournament/6abbae7c5748aace3da89947",
+   "end": "2026-11-15T21:00:00+01:00",
+   "hash": "5345f27c7ae2134d",
+   "location": "PalaBVA, Via del Fosso di Dragoncello, 201, Roma",
+   "start": "2026-11-15T09:00:00+01:00",
+   "summary": "AIBVC CNT L2 F · CNT - PalaBVA",
+   "url": "https://aibvc.app/tournament/6abbae7c5748aace3da89947"
+  },
+  "aibvc:6abbaee35748aace3da89a66": {
+   "all_day": false,
+   "description": "Circuito: AIBVC CNT L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 13/11/2026 12:00\nDettagli: https://aibvc.app/tournament/6abbaee35748aace3da89a66",
+   "end": "2026-11-15T21:00:00+01:00",
+   "hash": "2f6761c442045fc1",
+   "location": "PalaBVA, Via del Fosso di Dragoncello, 201, Roma",
+   "start": "2026-11-15T13:00:00+01:00",
+   "summary": "AIBVC CNT L2 M · CNT - PalaBVA",
+   "url": "https://aibvc.app/tournament/6abbaee35748aace3da89a66"
+  },
+  "aibvc:6ad5dc5b352fd41bfd6a3a95": {
+   "all_day": false,
+   "description": "Circuito: AIBVC L1\nGenere: M\nQuota: 50 € / coppia\nScadenza iscrizioni: 13/11/2026 20:00\nDettagli: https://aibvc.app/tournament/6ad5dc5b352fd41bfd6a3a95",
+   "end": "2026-11-15T21:00:00+01:00",
+   "hash": "9738693c7307008e",
+   "location": "Pala Ibeach Casetta Bianca, Via Martiri Della Storta, 40, Roma",
+   "start": "2026-11-15T13:00:00+01:00",
+   "summary": "AIBVC L1 M · Palaibeach Casetta Bianca",
+   "url": "https://aibvc.app/tournament/6ad5dc5b352fd41bfd6a3a95"
+  },
+  "aibvc:6ad5dc61352fd41bfd6a3d42": {
+   "all_day": false,
+   "description": "Circuito: AIBVC L1\nGenere: F\nQuota: 50 € / coppia\nScadenza iscrizioni: 13/11/2026 12:00\nDettagli: https://aibvc.app/tournament/6ad5dc61352fd41bfd6a3d42",
+   "end": "2026-11-15T21:00:00+01:00",
+   "hash": "863f3c68c5e9d360",
+   "location": "Pala Ibeach Casetta Bianca, Via Martiri Della Storta, 40, Roma",
+   "start": "2026-11-15T10:00:00+01:00",
+   "summary": "AIBVC L1 F · Palaibeach Casetta Bianca",
+   "url": "https://aibvc.app/tournament/6ad5dc61352fd41bfd6a3d42"
+  },
+  "fipav:0ba40a0edd7cd2e8": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: ASD BEACH VOLLEY CAMP\nCodici: BVLF12653, BVLM12652\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-31",
+   "hash": "73333f8578938398",
+   "location": "ASD BEACH VOLLEY CAMP, Roma",
+   "start": "2027-01-30",
+   "summary": "FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:237868cbba80fe47": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Under 14 M+F, Under 16 M+F, Under 18 M+F, Under 20 M+F\nOrganizzatore: BEACH VOLLEY ACADEMY\nCodici: BVLF12514, BVLF12516, BVLF12518, BVLF12520, BVLM12515, BVLM12519, BVLM12521, BVLM12557\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-06",
+   "hash": "c32158fd49967657",
+   "location": "BEACH VOLLEY ACADEMY, Roma",
+   "start": "2026-12-05",
+   "summary": "FIPAV Società · Under 14 M+F, Under 16 M+F, Under 18 M+F, Under 20 M+F · BEACH VOLLEY ACADEMY",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:25ac12a557d68c13": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: BEACH VOLLEY ACADEMY\nCodici: BVLF12584, BVLM12585\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-04",
+   "hash": "91591407b4b0662e",
+   "location": "BEACH VOLLEY ACADEMY, Roma",
+   "start": "2027-01-03",
+   "summary": "FIPAV Società · Silver M+F · BEACH VOLLEY ACADEMY",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:3036e55a0599c99c": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Master 35 F, Master 45 M, Master 55 M\nOrganizzatore: ASD ROMABEACHTOUR\nCodici: BVLF12573, BVLM12574, BVLM12575\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-29",
+   "hash": "0af5d5c44fde1305",
+   "location": "ASD ROMABEACHTOUR, Roma",
+   "start": "2026-11-28",
+   "summary": "FIPAV Società · Master 35 F, Master 45 M, Master 55 M · ASD ROMABEACHTOUR",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:3839bacad6b790da": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Gold M+F, Master 35 F\nOrganizzatore: WE BEACH ITALIA SSD A RL\nCodici: BVLF12560, BVLF12564, BVLM12563\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-16",
+   "hash": "e2b16e5695f1a79e",
+   "location": "WE BEACH ITALIA SSD A RL, Roma",
+   "start": "2026-11-15",
+   "summary": "FIPAV Società · Gold M+F, Master 35 F · WE BEACH ITALIA SSD A RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:3a7b16ba7d1e5496": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: PARADISE BEACH CITY SSD RL\nCodici: BVLF12607, BVLM12606\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-16",
+   "hash": "9af0d36dc5525ec5",
+   "location": "PARADISE BEACH CITY SSD RL, Roma",
+   "start": "2026-11-15",
+   "summary": "FIPAV Società · Beginners M+F · PARADISE BEACH CITY SSD RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:44a6afc03e01b635": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: ASD ROMABEACHTOUR\nCodici: BVLF12580, BVLM12581\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-18",
+   "hash": "6adb1e62bf13499f",
+   "location": "ASD ROMABEACHTOUR, Roma",
+   "start": "2027-01-17",
+   "summary": "FIPAV Società · Silver M+F · ASD ROMABEACHTOUR",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:4583c43714ec7b59": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: WE BEACH ITALIA SSD A RL\nCodici: BVLF12569, BVLM12570\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-04",
+   "hash": "0a10173b818f9c1b",
+   "location": "WE BEACH ITALIA SSD A RL, Roma",
+   "start": "2027-01-03",
+   "summary": "FIPAV Società · Beginners M+F · WE BEACH ITALIA SSD A RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:46e1e5eb5ee417b2": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: HERO SSD ARL\nCodici: BVLF12588, BVLM12589\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-07",
+   "hash": "9b3796c9fbd470d4",
+   "location": "HERO SSD ARL, Roma",
+   "start": "2026-12-06",
+   "summary": "FIPAV Società · Beginners M+F · HERO SSD ARL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:533311986963cd23": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Gold M+F\nOrganizzatore: BEACH VOLLEY ZONE S.S.D.A R.L.\nCodici: BVLF12696, BVLM12695\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-09",
+   "hash": "b21222a39b836231",
+   "location": "BEACH VOLLEY ZONE S.S.D.A R.L., Roma",
+   "start": "2026-12-08",
+   "summary": "FIPAV Società · Gold M+F · BEACH VOLLEY ZONE S.S.D.A R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:5706d619e475979a": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Bronze M+F\nOrganizzatore: HERO SSD ARL\nCodici: BVLF12591, BVLM12592\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-21",
+   "hash": "8e213a8b9ad6070c",
+   "location": "HERO SSD ARL, Roma",
+   "start": "2026-12-20",
+   "summary": "FIPAV Società · Bronze M+F · HERO SSD ARL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:5da35702c2003538": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: ASD BEACH VOLLEY CAMP\nCodici: BVLF12649, BVLM12648\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-30",
+   "hash": "6f3bebbc33ffc38d",
+   "location": "ASD BEACH VOLLEY CAMP, Roma",
+   "start": "2026-11-29",
+   "summary": "FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:617da556bb895cf4": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: BEACH VOLLEY ZONE S.S.D.A R.L.\nCodici: BVLF12525, BVLM12526\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-13",
+   "hash": "369881b44fbc6710",
+   "location": "BEACH VOLLEY ZONE S.S.D.A R.L., Roma",
+   "start": "2026-12-12",
+   "summary": "FIPAV Società · Silver M+F · BEACH VOLLEY ZONE S.S.D.A R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:64d6b38d8fbfe124": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: PARADISE BEACH CITY SSD RL\nCodici: BVLF12609, BVLM12608\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-07",
+   "hash": "dd5462f0593e4a2f",
+   "location": "PARADISE BEACH CITY SSD RL, Roma",
+   "start": "2026-12-06",
+   "summary": "FIPAV Società · Silver M+F · PARADISE BEACH CITY SSD RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:7b9a0522088476ce": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Bronze M+F\nOrganizzatore: BEACH VOLLEY ACADEMY\nCodici: BVLF12500, BVLM12501\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-30",
+   "hash": "d666c0a72aae6a2c",
+   "location": "BEACH VOLLEY ACADEMY, Roma",
+   "start": "2026-11-29",
+   "summary": "FIPAV Società · Bronze M+F · BEACH VOLLEY ACADEMY",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:7defd7aa806bed41": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Under 14 M+F, Under 16 M+F, Under 18 M+F, Under 20 M+F\nOrganizzatore: BEACH VOLLEY ZONE S.S.D.A R.L.\nCodici: BVLF12613, BVLF12614, BVLF12617, BVLF12618, BVLM12612, BVLM12615, BVLM12616, BVLM12619\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-20",
+   "hash": "42278c44c31f63ac",
+   "location": "BEACH VOLLEY ZONE S.S.D.A R.L., Roma",
+   "start": "2026-12-19",
+   "summary": "FIPAV Società · Under 14 M+F, Under 16 M+F, Under 18 M+F, Under 20 M+F · BEACH VOLLEY ZONE S.S.D.A R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:856c4f869a1863a3": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: BEACH VOLLEY ZONE S.S.D.A R.L.\nCodici: BVLF12528, BVLM12527\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-11",
+   "hash": "2b6bd1a931e0ce9e",
+   "location": "BEACH VOLLEY ZONE S.S.D.A R.L., Roma",
+   "start": "2027-01-10",
+   "summary": "FIPAV Società · Beginners M+F · BEACH VOLLEY ZONE S.S.D.A R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:8d0386b2c4667b0f": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Bronze M+F\nOrganizzatore: ASD ROMABEACHTOUR\nCodici: BVLF12577, BVLM12576\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-14",
+   "hash": "a94b9f8e3ba86c21",
+   "location": "ASD ROMABEACHTOUR, Roma",
+   "start": "2026-12-13",
+   "summary": "FIPAV Società · Bronze M+F · ASD ROMABEACHTOUR",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:9943d7c85299943f": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: ASD BEACH VOLLEY CAMP\nCodici: BVLF12699, BVLM12700\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-23",
+   "hash": "febe6fa684b80e00",
+   "location": "ASD BEACH VOLLEY CAMP, Roma",
+   "start": "2026-11-22",
+   "summary": "FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:a4dccec90fbf8645": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Bronze M+F\nOrganizzatore: WE BEACH ITALIA SSD A RL\nCodici: BVLF12572, BVLM12571\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-11",
+   "hash": "6247c9b1c316669c",
+   "location": "WE BEACH ITALIA SSD A RL, Roma",
+   "start": "2027-01-10",
+   "summary": "FIPAV Società · Bronze M+F · WE BEACH ITALIA SSD A RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:b2fb53bac43cbe15": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Bronze M+F\nOrganizzatore: BEACH VOLLEY ZONE S.S.D.A R.L.\nCodici: BVLF12524, BVLM12523\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-16",
+   "hash": "2232eef428f61ea8",
+   "location": "BEACH VOLLEY ZONE S.S.D.A R.L., Roma",
+   "start": "2026-11-15",
+   "summary": "FIPAV Società · Bronze M+F · BEACH VOLLEY ZONE S.S.D.A R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:b36518238177b299": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: PARADISE BEACH CITY SSD RL\nCodici: BVLF12611, BVLM12610\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-14",
+   "hash": "e25d71d5e7735007",
+   "location": "PARADISE BEACH CITY SSD RL, Roma",
+   "start": "2026-12-13",
+   "summary": "FIPAV Società · Beginners M+F · PARADISE BEACH CITY SSD RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:c3203f304cadde2c": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Bronze M+F\nOrganizzatore: WE BEACH ITALIA SSD A RL\nCodici: BVLF12568, BVLM12567\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-07",
+   "hash": "cbcd7e3c7fde0846",
+   "location": "WE BEACH ITALIA SSD A RL, Roma",
+   "start": "2026-12-06",
+   "summary": "FIPAV Società · Bronze M+F · WE BEACH ITALIA SSD A RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:c32c52475c186acf": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Gold M+F\nOrganizzatore: ASD ROMABEACHTOUR\nCodici: BVLF12583, BVLM12582\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-25",
+   "hash": "7b8ba791c93d80f3",
+   "location": "ASD ROMABEACHTOUR, Roma",
+   "start": "2027-01-24",
+   "summary": "FIPAV Società · Gold M+F · ASD ROMABEACHTOUR",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:c360a499cbbe7be9": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Gold M+F, Master 35 F, Master 45 M, Master 55 M\nOrganizzatore: HERO SSD ARL\nCodici: BVLF12593, BVLF12595, BVLM12594, BVLM12596, BVLM12597\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-10",
+   "hash": "8239aaf6bb866018",
+   "location": "HERO SSD ARL, Roma",
+   "start": "2027-01-09",
+   "summary": "FIPAV Società · Gold M+F, Master 35 F, Master 45 M, Master 55 M · HERO SSD ARL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:d53998377ee270b2": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Master 35 F, Master 45 M\nOrganizzatore: ASD BEACH VOLLEY CAMP\nCodici: BVLF12650, BVLM12651\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-07",
+   "hash": "ca0f368c6dbbbef4",
+   "location": "ASD BEACH VOLLEY CAMP, Roma",
+   "start": "2026-12-06",
+   "summary": "FIPAV Società · Master 35 F, Master 45 M · ASD BEACH VOLLEY CAMP",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:e8b36d43f2756e58": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: BEACH VOLLEY ACADEMY\nCodici: BVLF12510, BVLM12511\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-12-21",
+   "hash": "b28d16366b92552a",
+   "location": "BEACH VOLLEY ACADEMY, Roma",
+   "start": "2026-12-20",
+   "summary": "FIPAV Società · Beginners M+F · BEACH VOLLEY ACADEMY",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:ed950af4f4e0428e": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Bronze M+F\nOrganizzatore: ASD ROMABEACHTOUR\nCodici: BVLF12579, BVLM12578\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2027-01-07",
+   "hash": "146e03fc95febd22",
+   "location": "ASD ROMABEACHTOUR, Roma",
+   "start": "2027-01-06",
+   "summary": "FIPAV Società · Bronze M+F · ASD ROMABEACHTOUR",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:f22e223ecb1c94db": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: BAMBOO BEACH VOLLEY S.S.D.R.L.\nCodici: BVLF12708, BVLM12707\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-22",
+   "hash": "7dbfe5c85ca71ffc",
+   "location": "BAMBOO BEACH VOLLEY S.S.D.R.L., Roma",
+   "start": "2026-11-21",
+   "summary": "FIPAV Società · Beginners M+F · BAMBOO BEACH VOLLEY S.S.D.R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:f30aff4075f635e5": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: WE BEACH ITALIA SSD A RL\nCodici: BVLF12565, BVLM12566\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-29",
+   "hash": "eedb15e51c7ff636",
+   "location": "WE BEACH ITALIA SSD A RL, Roma",
+   "start": "2026-11-28",
+   "summary": "FIPAV Società · Beginners M+F · WE BEACH ITALIA SSD A RL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  },
+  "fipav:f322c329ec72c793": {
+   "all_day": true,
+   "description": "Circuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: HERO SSD ARL\nCodici: BVLF12418, BVLM12419\nElenco eventi: https://www.federvolley.it/campionati/beach-volley/eventi",
+   "end": "2026-11-16",
+   "hash": "667e56807f1fff06",
+   "location": "HERO SSD ARL, Roma",
+   "start": "2026-11-15",
+   "summary": "FIPAV Società · Silver M+F · HERO SSD ARL",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi"
+  }
+ },
+ "ultimo_controllo": "2026-11-14T22:31+01:00"
+}
