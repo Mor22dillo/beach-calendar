@@ -187,7 +187,7 @@ def aibvc_to_torneo(t: dict) -> Torneo:
             "impianto": venue.get("name") or "", "indirizzo": venue.get("address") or "",
             "quota": t.get("entryFee"), "sospeso": bool(sospeso),
             "scadenza": parse_iso(t["registrationDeadline"]).isoformat() if t.get("registrationDeadline") else None,
-            "links": [{"label": "Dettaglio torneo", "url": link}],
+            "links": [{"label": "Dettaglio torneo", "url": link, "genere": gen}],
         },
     )
 
@@ -296,7 +296,7 @@ def fipav_to_torneo(gruppo: list[dict]) -> Torneo:
             "citta": comune, "provincia": (e0.get("provincia") or "").title(),
             "impianto": "", "indirizzo": "", "organizzatore": club,
             "links": [{"label": etichetta(short_tipologia(e.get("tipologia", "")), {(e.get("genere") or "?")[0].upper()}),
-                       "url": link_gara(e)} for e in gare],
+                       "url": link_gara(e), "genere": (e.get("genere") or "?")[0].upper()} for e in gare],
         },
     )
 
@@ -508,6 +508,8 @@ PAGINA_HTML = r"""<!DOCTYPE html>
     --sea: #0e6f8f; --sea-soft: #e3f1f5;
     --aibvc: #0e6f8f; --fipav: #c4532b; --fipav-soft: #fbe9e2;
     --radius: 14px;
+    --f: #d6337f; --f-soft: #fde3ef; --f-line: #f4bcd6; --f-bg: #fff5f9;
+    --m: #1f66c9; --m-soft: #e1ecfb; --m-line: #b8d0f2; --m-bg: #f4f8fe;
   }
   * { box-sizing: border-box; }
   body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -529,13 +531,23 @@ PAGINA_HTML = r"""<!DOCTYPE html>
   .chip { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
           background: #fff; color: var(--ink); cursor: pointer; user-select: none; }
   .chip[aria-pressed=true] { background: var(--sea); border-color: var(--sea); color: #fff; }
-  .chip.fipav[aria-pressed=true] { background: var(--fipav); border-color: var(--fipav); }
+  .chip.fipav[aria-pressed=true] { background: #37474f; border-color: #37474f; }
   .reset { margin-left: auto; background: none; border: none; color: var(--sea); font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; }
   .count { margin: 16px 2px 6px; color: var(--muted); font-size: 13px; }
 
   .month { margin: 22px 2px 8px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
   .card { display: flex; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-          padding: 12px 14px; margin-bottom: 8px; }
+          padding: 12px 14px 12px 20px; margin-bottom: 8px; position: relative; overflow: hidden; }
+  .card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--line); }
+  .card.gF::before { background: var(--f); }
+  .card.gM::before { background: var(--m); }
+  .card.gMF::before { background: linear-gradient(var(--m) 50%, var(--f) 50%); }
+  .badge.g-F { background: var(--f-soft); color: var(--f); }
+  .badge.g-M { background: var(--m-soft); color: var(--m); }
+  .chip.g-F[aria-pressed=true] { background: var(--f); border-color: var(--f); }
+  .chip.g-M[aria-pressed=true] { background: var(--m); border-color: var(--m); }
+  .legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); margin-left: 6px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
   .card.past { opacity: .55; }
   .date { flex: 0 0 54px; text-align: center; border-right: 1px solid var(--line); padding-right: 12px; }
   .date .d { font-size: 24px; font-weight: 700; line-height: 1; }
@@ -543,15 +555,16 @@ PAGINA_HTML = r"""<!DOCTYPE html>
   .date .t { font-size: 12px; color: var(--sea); font-weight: 600; margin-top: 4px; }
   .body { flex: 1; min-width: 0; }
   .top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 4px; }
-  .badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: var(--sea-soft); color: var(--aibvc); }
-  .badge.fipav { background: var(--fipav-soft); color: var(--fipav); }
+  .badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #eceff1; color: #37474f; }
+  .badge.fipav { background: #37474f; color: #fff; }
   .badge.warn { background: #fde2e2; color: #b42318; }
   .name { font-weight: 650; font-size: 16px; }
   .cats { font-size: 13px; color: var(--ink); margin-top: 2px; }
   .where { font-size: 13px; color: var(--muted); margin-top: 2px; }
   .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .links a { font-size: 12px; text-decoration: none; color: var(--sea); border: 1px solid #b9dbe5; border-radius: 8px; padding: 4px 9px; background: #f6fbfc; }
-  .card.f .links a { color: var(--fipav); border-color: #f0c9b9; background: #fff8f5; }
+  .links a.g-F { color: var(--f); border-color: var(--f-line); background: var(--f-bg); }
+  .links a.g-M { color: var(--m); border-color: var(--m-line); background: var(--m-bg); }
   .links a:hover { filter: brightness(.95); }
   .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
   footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 30px; }
@@ -649,7 +662,10 @@ function buildChips() {
   const g = $("generi"); g.querySelectorAll(".chip").forEach(x => x.remove());
   GENERI.forEach(([k,l]) => chip(g, l, F.gen.includes(k), () => {
     F.gen = F.gen.includes(k) ? F.gen.filter(x => x !== k) : [...F.gen, k];
-  }));
+  }, "g-" + k));
+  if (!g.querySelector(".legend")) g.insertAdjacentHTML("beforeend",
+    '<span class="legend"><span><i style="background:var(--m)"></i>maschile</span><span><i style="background:var(--f)"></i>femminile</span></span>');
+  else g.appendChild(g.querySelector(".legend"));
   document.querySelectorAll("#periodo .chip").forEach(b =>
     b.setAttribute("aria-pressed", (!F.dal && !F.al && F.p === b.dataset.p) ? "true" : "false"));
 }
@@ -714,13 +730,15 @@ function render() {
     const dove = [i.impianto, i.indirizzo, i.citta && (i.provincia && i.provincia !== i.citta ? `${i.citta} (${i.provincia})` : i.citta)]
                  .filter(Boolean).join(" · ");
     const links = (i.links || [{ label: "Dettaglio", url: t.r.url }])
-                 .map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">🔗 ${esc(l.label)}</a>`).join("");
+                 .map(l => `<a class="${l.genere ? "g-" + esc(l.genere) : ""}" href="${esc(l.url)}" target="_blank" rel="noopener">🔗 ${esc(l.label)}</a>`).join("");
+    const gs = (i.generi || []).filter(g => g === "M" || g === "F").sort().reverse();   // M prima di F
+    const gCls = gs.length === 2 ? "gMF" : gs.length === 1 ? "g" + gs[0] : "";
     const extra = [];
     if (i.quota != null) extra.push(`${i.quota} € / coppia`);
     if (i.scadenza) { const sc = new Date(i.scadenza);
       extra.push(`iscrizioni entro ${sc.getDate()}/${sc.getMonth()+1} ore ${hhmm(sc)}`); }
     list.insertAdjacentHTML("beforeend", `
-      <article class="card ${f ? "f" : ""} ${t.e < OGGI ? "past" : ""}">
+      <article class="card ${f ? "f" : ""} ${gCls} ${t.e < OGGI ? "past" : ""}">
         <div class="date">
           <div class="d">${t.s.getDate()}</div>
           <div class="w">${GIORNI[t.s.getDay()]}${multi ? "–" + GIORNI[t.e.getDay()] : ""}</div>
@@ -729,7 +747,7 @@ function render() {
         <div class="body">
           <div class="top">
             <span class="badge ${f ? "fipav" : ""}">${esc(i.fonte || "")} ${esc(i.circuito || "")}</span>
-            ${(i.generi || []).map(g => `<span class="badge ${f ? "fipav" : ""}">${g}</span>`).join("")}
+            ${gs.map(g => `<span class="badge g-${g}">${g === "F" ? "Femminile" : "Maschile"}</span>`).join("")}
             ${i.sospeso ? '<span class="badge warn">SOSPESO</span>' : ""}
           </div>
           <div class="name">${esc(i.nome || t.r.summary)}</div>
