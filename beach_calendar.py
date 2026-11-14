@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sincronizza i tornei di beach volley a Roma (AIBVC + FIPAV) su un Google Calendar
+Sincronizza i tornei di beach volley nel Lazio (AIBVC + FIPAV) su un Google Calendar
 e invia su Telegram un riepilogo dei tornei nuovi, modificati o rimossi.
 
 Fonti (le stesse API usate dai due siti):
@@ -20,7 +20,7 @@ Variabili d'ambiente:
   GOOGLE_CALENDAR_ID           ID del calendario (es. abc123@group.calendar.google.com)
   TELEGRAM_BOT_TOKEN           token del bot Telegram
   TELEGRAM_CHAT_ID             chat a cui inviare i messaggi
-  FILTRO_ZONA                  "comune" (default: solo Roma) oppure "provincia" (Roma + Fiumicino, ecc.)
+  FILTRO_ZONA                  "regione" (default: tutto il Lazio), "provincia" (provincia di Roma) o "comune" (solo Roma)
   DRY_RUN                      se "1" non scrive sul calendario e stampa il messaggio invece di inviarlo
 """
 
@@ -92,9 +92,17 @@ def get_json(url: str, params: dict | None = None):
         return json.load(r)
 
 
-# --- Filtro Roma ----------------------------------------------------------------
+# --- Filtro zona ---------------------------------------------------------------
+# FILTRO_ZONA: "comune" = solo Roma, "provincia" = provincia di Roma, "regione" = tutto il Lazio
+ZONA_LABEL = {"comune": "a Roma", "provincia": "in provincia di Roma", "regione": "nel Lazio"}
+
+
 def is_roma_aibvc(t: dict, zona: str) -> bool:
     city = (t.get("city") or "").strip()
+    if zona == "regione":
+        z = t.get("zone")
+        zone = (z.get("name") if isinstance(z, dict) else z) or ""
+        return (t.get("region") or "").strip().lower() == "lazio" or zone.strip().upper() == "LAZIO"
     if re.match(r"^roma\b", city, re.I):
         return True
     if zona == "provincia":
@@ -104,9 +112,17 @@ def is_roma_aibvc(t: dict, zona: str) -> bool:
 
 
 def is_roma_fipav(e: dict, zona: str) -> bool:
+    if zona == "regione":
+        return (e.get("regione") or "").strip().upper() == "LAZIO"
     if zona == "provincia":
         return (e.get("provincia") or "").upper() == "ROMA"
     return (e.get("comune") or "").strip().lower() == "roma"
+
+
+def fuori_roma(citta: str) -> str:
+    """Nome della città da mostrare se il torneo non è a Roma (altrimenti stringa vuota)."""
+    c = re.sub(r"\s*\(.*?\)\s*", "", citta or "").strip()
+    return "" if not c or c.lower() == "roma" else c
 
 
 # --- AIBVC --------------------------------------------------------------------
@@ -134,7 +150,10 @@ def aibvc_to_torneo(t: dict) -> Torneo:
     venue = t.get("venue") or {}
     sospeso = (t.get("suspension") or {}).get("isSuspended")
     nome = t.get("name", "Torneo")
+    citta = fuori_roma(t.get("city"))
     titolo = f"{'❌ SOSPESO · ' if sospeso else ''}AIBVC {cat} {gen} · {nome}".replace("  ", " ")
+    if citta:
+        titolo += f" · {citta}"
 
     inizio = parse_iso(t["startDate"])
     fine = parse_iso(t.get("endDate") or t["startDate"])
@@ -157,7 +176,8 @@ def aibvc_to_torneo(t: dict) -> Torneo:
         titolo=titolo,
         inizio=inizio, fine=fine, luogo=luogo,
         descrizione="\n".join(righe), link=link, fonte="aibvc",
-        riga_telegram=f"{fmt_giorno(inizio)} · <b>AIBVC {cat} {gen}</b> · {html.escape(nome)}",
+        riga_telegram=(f"{fmt_giorno(inizio)} · <b>AIBVC {cat} {gen}</b> · {html.escape(nome)}"
+                       + (f" · 📍{html.escape(citta)}" if citta else "")),
         impronta={"t": titolo, "s": inizio, "e": fine, "l": luogo},
     )
 
@@ -178,7 +198,7 @@ def fetch_fipav(zona: str, oggi: dt.date) -> list[Torneo]:
                 for gruppo in per_genere.values():
                     eventi.extend(gruppo.get("codici", []))
 
-    # Tieni solo categorie richieste, Roma, da oggi in poi
+    # Tieni solo categorie richieste, zona scelta, da oggi in poi
     eventi = [e for e in eventi
               if e.get("menu_eventi") in FIPAV_MENU
               and is_roma_fipav(e, zona)
@@ -227,6 +247,9 @@ def fipav_to_torneo(gruppo: list[dict]) -> Torneo:
     if len(titolo) > 90:
         titolo = f"FIPAV {sezione} · {len(categorie)} categorie"
     titolo += f" · {club}" if club else ""
+    citta = fuori_roma(comune)
+    if citta:
+        titolo += f" · {citta}"
 
     righe = [f"Circuito: FIPAV – {sezione}", "Categorie: " + ", ".join(categorie)]
     if club:
@@ -245,7 +268,8 @@ def fipav_to_torneo(gruppo: list[dict]) -> Torneo:
         luogo=f"{club}, {comune}" if club else comune,
         descrizione="\n".join(righe), link=FIPAV_LINK, fonte="fipav",
         riga_telegram=(f"{fmt_giorno(inizio)} · <b>FIPAV {sezione}</b> · {html.escape(', '.join(categorie))}"
-                       + (f" · {html.escape(club)}" if club else "")),
+                       + (f" · {html.escape(club)}" if club else "")
+                       + (f" · 📍{html.escape(citta)}" if citta else "")),
         impronta={"t": titolo, "s": inizio, "e": fine, "c": categorie},
     )
 
@@ -436,10 +460,10 @@ def build_ics(state: dict, nome: str) -> str:
 
 
 # --- Telegram -----------------------------------------------------------------
-def build_messages(nuovi, modificati, rimossi, errori, cal_link: str | None) -> list[str]:
+def build_messages(nuovi, modificati, rimossi, errori, cal_link: str | None, dove: str = "nel Lazio") -> list[str]:
     blocchi = []
     if nuovi:
-        blocchi.append(f"🏐 <b>{len(nuovi)} nuov{'o torneo' if len(nuovi) == 1 else 'i tornei'} a Roma</b>")
+        blocchi.append(f"🏐 <b>{len(nuovi)} nuov{'o torneo' if len(nuovi) == 1 else 'i tornei'} {dove}</b>")
         blocchi += ["• " + t.riga_telegram for t in sorted(nuovi, key=sort_key)]
     if modificati:
         blocchi.append(f"\n✏️ <b>Aggiornati ({len(modificati)})</b>")
@@ -480,7 +504,9 @@ def send_telegram(token: str, chat_id: str, text: str):
 # --- Main ---------------------------------------------------------------------
 def main() -> int:
     dry_run = os.environ.get("DRY_RUN") == "1"
-    zona = os.environ.get("FILTRO_ZONA", "comune").lower()
+    zona = (os.environ.get("FILTRO_ZONA") or "regione").lower()
+    if zona not in ZONA_LABEL:
+        zona = "regione"
     now = dt.datetime.now(TZ)
 
     tornei, fonti_ok, errori = [], set(), []
@@ -489,7 +515,7 @@ def main() -> int:
             res = fn()
             tornei += res
             fonti_ok.add(nome)
-            print(f"{nome.upper()}: {len(res)} tornei a Roma")
+            print(f"{nome.upper()}: {len(res)} tornei {ZONA_LABEL[zona]}")
         except Exception as ex:  # una fonte giù non deve bloccare l'altra
             errori.append(f"{nome.upper()} non raggiungibile: {ex}")
             print(f"ERRORE {nome}: {ex}", file=sys.stderr)
@@ -531,7 +557,7 @@ def main() -> int:
             cal_link = f"https://calendar.google.com/calendar/u/0/r?cid={urllib.parse.quote(cal_id)}"
 
     print(f"Modalità: {modalita} · Nuovi: {len(nuovi)} · Aggiornati: {len(modificati)} · Rimossi: {len(rimossi)}")
-    msgs = build_messages(nuovi, modificati, rimossi, errori, cal_link)
+    msgs = build_messages(nuovi, modificati, rimossi, errori, cal_link, ZONA_LABEL[zona])
     token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
     for m in msgs:
         if dry_run or not (token and chat):
