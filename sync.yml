@@ -1,0 +1,45 @@
+name: Sync tornei beach volley Roma
+
+on:
+  schedule:
+    # Ogni giorno alle 06:17 UTC (07:17 ora italiana d'inverno, 08:17 d'estate)
+    - cron: "17 6 * * *"
+  workflow_dispatch: {}   # permette di lanciarlo a mano dalla tab "Actions"
+
+permissions:
+  contents: write         # serve per salvare il file .ics nel repository
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Le librerie Google servono solo in modalità "google", ma installarle sempre non costa nulla
+      - run: pip install -r requirements.txt
+      - run: python beach_calendar.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FILTRO_ZONA: ${{ vars.FILTRO_ZONA || 'comune' }}
+          # Modalità google (facoltativa): se questi secret mancano si usa il file .ics
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
+      - name: Salva calendario e stato
+        run: |
+          git config user.name "beach-calendar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs data 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica da salvare"
+          else
+            git commit -m "Aggiornamento tornei $(date -u +%Y-%m-%d)"
+            git push
+          fi
