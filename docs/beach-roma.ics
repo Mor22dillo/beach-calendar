@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
 UID:fipav-3839bacad6b790da@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:FIPAV Società · Gold M+F\, Master 35 F · WE BEACH ITALIA SSD A R
@@ -27,7 +27,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-3a7b16ba7d1e5496@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:FIPAV Società · Beginners M+F · PARADISE BEACH CITY SSD RL
@@ -43,7 +43,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-b2fb53bac43cbe15@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:FIPAV Società · Bronze M+F · BEACH VOLLEY ZONE S.S.D.A R.L.
@@ -59,7 +59,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-f322c329ec72c793@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:FIPAV Società · Silver M+F · HERO SSD ARL
@@ -75,7 +75,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aibvc-6abbae7c5748aace3da89947@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART:20261115T080000Z
 DTEND:20261115T200000Z
 SUMMARY:AIBVC CNT L2 F · CNT - PalaBVA
@@ -88,7 +88,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aibvc-6ad5dc61352fd41bfd6a3d42@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART:20261115T090000Z
 DTEND:20261115T200000Z
 SUMMARY:AIBVC L1 F · Palaibeach Casetta Bianca
@@ -101,7 +101,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aibvc-6abbaee35748aace3da89a66@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART:20261115T120000Z
 DTEND:20261115T200000Z
 SUMMARY:AIBVC CNT L2 M · CNT - PalaBVA
@@ -114,7 +114,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aibvc-6ad5dc5b352fd41bfd6a3a95@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART:20261115T120000Z
 DTEND:20261115T200000Z
 SUMMARY:AIBVC L1 M · Palaibeach Casetta Bianca
@@ -126,8 +126,78 @@ URL:https://aibvc.app/tournament/6ad5dc5b352fd41bfd6a3a95
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:clubseries-2fc8c37674c02bac@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Club Series · Over 35 F · Dabliu Eur Sport Club · RBT
+LOCATION:Dabliu Eur Sport Club\, Viale Egeo\, 98\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Over 35 F G1-D: https://clubseries.a
+ pp/campionato/tappa/724\n\nCircuito: AIBVC Club Series\nCategorie: Over 35
+  F\nSquadre RBT: RBT SCHOOL Mamasole Drink e Food\nOver 35 F G1-D – squa
+ dre: Hero Beach Volley Hero Rossa\, BAMBOO BEACH VOLLEY S.S.D.A.R.L.\, RBT
+  SCHOOL Mamasole Drink e Food\, Beach Volley Zone Roma Integral System\nIn
+ dirizzo: Viale Egeo\, 98\, ROMA\nMappa: https://www.google.com/maps/search
+ /?api=1&query=41.828894\,12.454359
+URL:https://clubseries.app/campionato/tappa/724
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-7f3e652a152d4e4e@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Club Series · Promozione F · Pala Ibeach Casetta Bianca · RBT
+LOCATION:Pala Ibeach Casetta Bianca\, Via Martiri Della Storta\, 40\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Promozione F G1-AA: https://clubseri
+ es.app/campionato/tappa/787\n\nCircuito: AIBVC Club Series\nCategorie: Pro
+ mozione F\nSquadre RBT: RBT SCHOOL Bono Burger\nPromozione F G1-AA – squ
+ adre: Ibeach Share My Boat\, BAMBOO BEACH VOLLEY S.S.D.A.R.L. Viola\, Beac
+ h Volley Academy\, DDS Beach Volley School DDS\, Urban Beach Ed Pro Roma W
+ hite\, RBT SCHOOL Bono Burger\nIndirizzo: Via Martiri Della Storta\, 40\, 
+ Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.989147\,12
+ .408067
+URL:https://clubseries.app/campionato/tappa/787
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-448559236aacdf71@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Club Series · Over 50 M · Real Sporting Village · RBT
+LOCATION:Real Sporting Village\, Via Licio Giorgieri\, 50\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Over 50 M G1-D: https://clubseries.a
+ pp/campionato/tappa/756\n\nCircuito: AIBVC Club Series\nCategorie: Over 50
+  M\nSquadre RBT: RBT SCHOOL Teti Arredamenti\, RBT SCHOOL Teti Arredamenti
+  Gruppo Febal\nOver 50 M G1-D – squadre: Beach Volley Academy\, Hero Bea
+ ch Volley Hero Blu\, RBT SCHOOL Teti Arredamenti\, RBT SCHOOL Teti Arredam
+ enti Gruppo Febal\, Ibeach Share My Boat\, We Beach Club We Beach Club IBI
+ LL\nIndirizzo: Via Licio Giorgieri\, 50\, Roma\nMappa: https://www.google.
+ com/maps/search/?api=1&query=41.8827\,12.38828
+URL:https://clubseries.app/campionato/tappa/756
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-3675619c6c7faf31@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Club Series · Over 43 M · PalaBVA · RBT
+LOCATION:PalaBVA\, Via del Fosso di Dragoncello\, 201\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Over 43 M G1-F: https://clubseries.a
+ pp/campionato/tappa/746\n\nCircuito: AIBVC Club Series\nCategorie: Over 43
+  M\nSquadre RBT: RBT SCHOOL Fisiocipro\nOver 43 M G1-F – squadre: Beach 
+ Volley Academy\, Sport Sun Agroinnova\, Ibeach Albos Club Fregene\, Urban 
+ Beach Ed Pro Roma\, Beach Volley Universe Bari Lupi\, RBT SCHOOL Fisiocipr
+ o\nIndirizzo: Via del Fosso di Dragoncello\, 201\, Roma\nMappa: https://ww
+ w.google.com/maps/search/?api=1&query=41.753072\,12.331781
+URL:https://clubseries.app/campionato/tappa/746
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:fipav-9943d7c85299943f@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 SUMMARY:FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP
@@ -142,8 +212,151 @@ URL:https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF1269
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:clubseries-7a9a352769ea3802@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Under 21 M · Real Sporting Village · RBT
+LOCATION:Real Sporting Village\, Via Licio Giorgieri\, 50\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Under 21 M G1-B: https://clubseries.
+ app/campionato/tappa/963\n\nCircuito: AIBVC Club Series\nCategorie: Under 
+ 21 M\nSquadre RBT: RBT SCHOOL\nUnder 21 M G1-B – squadre: Ibeach Albos C
+ lub Fregene\, Beach Volley Academy Effepiu'\, Paradise Beach City Paradise
+  Beach City - Therapeia\, RBT SCHOOL\nIndirizzo: Via Licio Giorgieri\, 50\
+ , Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.8827\,12
+ .38828
+URL:https://clubseries.app/campionato/tappa/963
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-c0d2f3a96b7a2ed4@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Under 21 F · PalaBVA · RBT
+LOCATION:PalaBVA\, Via del Fosso di Dragoncello\, 201\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Under 21 F G1-D: https://clubseries.
+ app/campionato/tappa/955\n\nCircuito: AIBVC Club Series\nCategorie: Under 
+ 21 F\nSquadre RBT: RBT SCHOOL\nUnder 21 F G1-D – squadre: Beach Volley A
+ cademy Veraclub\, Ibeach Hotel Plaza Chianciano Terme\, RBT SCHOOL\, We Be
+ ach Club We Beach Club FITD\nIndirizzo: Via del Fosso di Dragoncello\, 201
+ \, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.753072\
+ ,12.331781
+URL:https://clubseries.app/campionato/tappa/955
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-69b0f4af966a38a6@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Over 35 F · Ibeach Arena Dabliu · RBT
+LOCATION:Ibeach Arena Dabliu\, via Busto Arsizio\, 31\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Over 35 F G1-E: https://clubseries.a
+ pp/campionato/tappa/725\n\nCircuito: AIBVC Club Series\nCategorie: Over 35
+  F\nSquadre RBT: RBT SCHOOL Ellebi Viaggi e Turismo\nOver 35 F G1-E – sq
+ uadre: Beach Volley Academy\, Urban Beach Ed Pro Roma\, Hero Beach Volley 
+ Hero Blu\, RBT SCHOOL Ellebi Viaggi e Turismo\, Ibeach Share My Boat\nIndi
+ rizzo: via Busto Arsizio\, 31\, Roma\nMappa: https://www.google.com/maps/s
+ earch/?api=1&query=41.996787\,12.474509
+URL:https://clubseries.app/campionato/tappa/725
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-7801b5a546cc2e11@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Promozione M · Pala Ibeach Casetta Bianca · RBT
+LOCATION:Pala Ibeach Casetta Bianca\, Via Martiri Della Storta\, 40\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Promozione M G1-AC: https://clubseri
+ es.app/campionato/tappa/582\n\nCircuito: AIBVC Club Series\nCategorie: Pro
+ mozione M\nSquadre RBT: RBT SCHOOL Pinetina Ostia\nPromozione M G1-AC – 
+ squadre: Ibeach Albos Club Fregene\, Alfabravo\, Beach Volley Terni Beach 
+ Volley Terni BLU\, Hero Beach Volley Hero Blu\, Beach Volley Zone Professi
+ onisti Immobiliari\, RBT SCHOOL Pinetina Ostia\nIndirizzo: Via Martiri Del
+ la Storta\, 40\, Roma\nMappa: https://www.google.com/maps/search/?api=1&qu
+ ery=41.989147\,12.408067
+URL:https://clubseries.app/campionato/tappa/582
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-f034109ff63ebf50@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Promozione M · Borussia Village · RBT
+LOCATION:Borussia Village\, Via Franco Tosi 19\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Promozione M G1-AF: https://clubseri
+ es.app/campionato/tappa/585\n\nCircuito: AIBVC Club Series\nCategorie: Pro
+ mozione M\nSquadre RBT: RBT SCHOOL Acqua e Sale Maccarese\nPromozione M G1
+ -AF – squadre: Beach Volley Academy\, Beach Volley Zone DOING - Fare Ing
+ egneria\, BEACH VOLLEY EVOLUTION A.S.D. Ibeach-Monterotondo Rossa\, RBT SC
+ HOOL Acqua e Sale Maccarese\, POLISPORTIVA SPORT DEVOTION S.S.D.A.R.L. Spo
+ rt Devotion\nIndirizzo: Via Franco Tosi 19\, Roma\nMappa: https://www.goog
+ le.com/maps/search/?api=1&query=41.857564\,12.643256
+URL:https://clubseries.app/campionato/tappa/585
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-a02c045b60adb41a@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Promozione F · Paradise Empire · RBT
+LOCATION:Paradise Empire\, Via Degli Aldobrandeschi\, 115\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Promozione F G1-Z: https://clubserie
+ s.app/campionato/tappa/786\n\nCircuito: AIBVC Club Series\nCategorie: Prom
+ ozione F\nSquadre RBT: RBT SCHOOL Kaya Lounge Bar\nPromozione F G1-Z – s
+ quadre: Beach Volley Academy\, Beach Volley Zone Carrozzeria Pisegna\, Urb
+ an Beach Ed Pro Roma Black\, Paradise Beach City Paradise Beach City - Bia
+ nco\, RBT SCHOOL Kaya Lounge Bar\nIndirizzo: Via Degli Aldobrandeschi\, 11
+ 5\, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.877697
+ \,12.397401
+URL:https://clubseries.app/campionato/tappa/786
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-1d9d39de5aec3f60@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Promozione F · Sport City Roma · RBT
+LOCATION:Sport City Roma\, Via Álvaro del Portillo\, 282\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Promozione F G1-AB: https://clubseri
+ es.app/campionato/tappa/788\n\nCircuito: AIBVC Club Series\nCategorie: Pro
+ mozione F\nSquadre RBT: RBT SCHOOL Tajo Restaurant\nPromozione F G1-AB –
+  squadre: Beach Volley Academy\, Beach Volley Zone CS Revolution\, Paradis
+ e Beach City Paradise Beach City - Verde\, RBT SCHOOL Tajo Restaurant\, We
+  Beach Club We Beach Club DE IAPINIS\nIndirizzo: Via Álvaro del Portillo\
+ , 282\, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.76
+ 9682\,12.467274
+URL:https://clubseries.app/campionato/tappa/788
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-1f58c987c39b4b3f@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Club Series · Over 40 F · Dabliu Eur Sport Club · RBT
+LOCATION:Dabliu Eur Sport Club\, Viale Egeo\, 98\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Over 40 F G1-D: https://clubseries.a
+ pp/campionato/tappa/734\n• Over 40 F G1-E: https://clubseries.app/campio
+ nato/tappa/735\n\nCircuito: AIBVC Club Series\nCategorie: Over 40 F\nSquad
+ re RBT: RBT SCHOOL Ellebi Viaggi e Turismo\, RBT SCHOOL Fisiocipro\nOver 4
+ 0 F G1-D – squadre: Hero Beach Volley Hero Blu\, Paradise Beach City Par
+ adise Beach City\, RBT SCHOOL Fisiocipro\nOver 40 F G1-E – squadre: Beac
+ h Volley Academy\, Hero Beach Volley Hero Rossa\, RBT SCHOOL Ellebi Viaggi
+  e Turismo\, We Beach Club We Beach Club DE IAPINIS\nIndirizzo: Viale Egeo
+ \, 98\, ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.82
+ 8894\,12.454359
+URL:https://clubseries.app/campionato/tappa/734
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:fipav-3036e55a0599c99c@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:FIPAV Società · Master 35 F\, Master 45 M\, Master 55 M · ASD RO
@@ -161,7 +374,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-f30aff4075f635e5@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:FIPAV Società · Beginners M+F · WE BEACH ITALIA SSD A RL
@@ -177,7 +390,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-5da35702c2003538@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP
@@ -193,7 +406,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-7b9a0522088476ce@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:FIPAV Società · Bronze M+F · BEACH VOLLEY ACADEMY
@@ -208,8 +421,80 @@ URL:https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF1250
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:clubseries-0e816754c157c3bd@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Club Series · Eccellenza M · Ibeach Arena Dabliu · RBT
+LOCATION:Ibeach Arena Dabliu\, via Busto Arsizio\, 31\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Eccellenza M G1-N: https://clubserie
+ s.app/campionato/tappa/692\n\nCircuito: AIBVC Club Series\nCategorie: Ecce
+ llenza M\nSquadre RBT: RBT SCHOOL Real Sporting Village\nEccellenza M G1-N
+  – squadre: Ibeach Albos Club Fregene\, Beach Volley Academy\, Obeya OBE
+ YA Of Occhiali\, RBT SCHOOL Real Sporting Village\, Sport Sun Sport Sun Ag
+ rinnova\, We Beach Club We Beach Club IBILL\nIndirizzo: via Busto Arsizio\
+ , 31\, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.996
+ 787\,12.474509
+URL:https://clubseries.app/campionato/tappa/692
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-688959cd018ecaf4@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Club Series · Serie C M · PalaBVA · RBT
+LOCATION:PalaBVA\, Via del Fosso di Dragoncello\, 201\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Serie C M G1-H: https://clubseries.a
+ pp/campionato/tappa/639\n\nCircuito: AIBVC Club Series\nCategorie: Serie C
+  M\nSquadre RBT: RBT SCHOOL Buena Onda\nSerie C M G1-H – squadre: Beach 
+ Volley Academy\, Hero Beach Volley Hero Blu\, Obeya OBEYA SIR Safety Perug
+ ia\, Paradise Beach City Paradise Beach City - Paradisus Performance Lab\,
+  RBT SCHOOL Buena Onda\nIndirizzo: Via del Fosso di Dragoncello\, 201\, Ro
+ ma\nMappa: https://www.google.com/maps/search/?api=1&query=41.753072\,12.3
+ 31781
+URL:https://clubseries.app/campionato/tappa/639
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-9558432ec6d3c134@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Club Series · Serie C F · Dabliu Eur Sport Club · RBT
+LOCATION:Dabliu Eur Sport Club\, Viale Egeo\, 98\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Serie C F G1-G: https://clubseries.a
+ pp/campionato/tappa/943\n\nCircuito: AIBVC Club Series\nCategorie: Serie C
+  F\nSquadre RBT: RBT SCHOOL Havana Beach Focene\nSerie C F G1-G – squadr
+ e: Hero Beach Volley Hero Blu\, Beach Volley Academy\, Ibeach Hotel Plaza 
+ Chianciano Terme\, Paradise Beach City Paradise Beach City - Paradisus Per
+ formance Lab\, RBT SCHOOL Havana Beach Focene\nIndirizzo: Viale Egeo\, 98\
+ , ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.828894\,
+ 12.454359
+URL:https://clubseries.app/campionato/tappa/943
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-117340183b7ab561@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Club Series · Eccellenza F · Real Sporting Village · RBT
+LOCATION:Real Sporting Village\, Via Licio Giorgieri\, 50\, Roma
+DESCRIPTION:🔗 Dettaglio tappa:\n• Eccellenza F G1-J: https://clubserie
+ s.app/campionato/tappa/655\n\nCircuito: AIBVC Club Series\nCategorie: Ecce
+ llenza F\nSquadre RBT: RBT SCHOOL Play Selva Candida\nEccellenza F G1-J 
+ – squadre: RBT SCHOOL Play Selva Candida\, Beach Volley World\, Hero Bea
+ ch Volley Hero Blu\, Ibeach Hotel Plaza Chianciano Terme\, Paradise Beach 
+ City Paradise Beach City - Blu\, Skyball Beach Volley School Skyball Gross
+ eto\nIndirizzo: Via Licio Giorgieri\, 50\, Roma\nMappa: https://www.google
+ .com/maps/search/?api=1&query=41.8827\,12.38828
+URL:https://clubseries.app/campionato/tappa/655
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:fipav-237868cbba80fe47@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:FIPAV Società · Under 14 M+F\, Under 16 M+F\, Under 18 M+F\, Unde
@@ -234,7 +519,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aibvc-6afc1dec058b884cb17abbdf@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART:20261205T083000Z
 DTEND:20261205T180000Z
 SUMMARY:AIBVC CNT L1 F · CNT -Play Selva Candida
@@ -247,7 +532,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-46e1e5eb5ee417b2@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:FIPAV Società · Beginners M+F · HERO SSD ARL
@@ -263,7 +548,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-64d6b38d8fbfe124@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:FIPAV Società · Silver M+F · PARADISE BEACH CITY SSD RL
@@ -279,7 +564,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-c3203f304cadde2c@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:FIPAV Società · Bronze M+F · WE BEACH ITALIA SSD A RL
@@ -295,7 +580,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-d53998377ee270b2@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:FIPAV Società · Master 35 F\, Master 45 M · ASD BEACH VOLLEY CAM
@@ -312,7 +597,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aibvc-6afc1cc7058b884cb17aa4ca@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART:20261206T083000Z
 DTEND:20261206T180000Z
 SUMMARY:AIBVC CNT L1 M · CNT - Play Selva Candida
@@ -325,7 +610,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-533311986963cd23@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:FIPAV Società · Gold M+F · BEACH VOLLEY ZONE S.S.D.A R.L.
@@ -341,7 +626,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-617da556bb895cf4@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:FIPAV Società · Silver M+F · BEACH VOLLEY ZONE S.S.D.A R.L.
@@ -357,7 +642,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-8d0386b2c4667b0f@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:FIPAV Società · Bronze M+F · ASD ROMABEACHTOUR
@@ -373,7 +658,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-b36518238177b299@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:FIPAV Società · Beginners M+F · PARADISE BEACH CITY SSD RL
@@ -388,8 +673,51 @@ URL:https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF1261
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:clubseries-6478b58bb4e045fd@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Club Series · Serie A F\, Serie Elite F · Centro Sportivo Il Lope
+  Milano · Milano · RBT
+LOCATION:Centro Sportivo Il Lope Milano\, Via Felice Lope de Vega 35\, Mila
+ no
+DESCRIPTION:🔗 Dettaglio tappa:\n• Serie A F G1-A: https://clubseries.a
+ pp/campionato/tappa/607\n• Serie Elite F G1-A: https://clubseries.app/ca
+ mpionato/tappa/608\n\nCircuito: AIBVC Club Series\nCategorie: Serie A F\, 
+ Serie Elite F\nSquadre RBT: RBT SCHOOL Ellebi Agenzia Pratiche Auto e Assi
+ curazioni\, RBT SCHOOL Ellebi Viaggi e Turismo\nSerie A F G1-A – squadre
+ : Urban Beach NetSin Roma\, Beach Sports Chiavari\, GTA - GranTeam Academy
+ \, RBT SCHOOL Ellebi Viaggi e Turismo\nSerie Elite F G1-A – squadre: Urb
+ an Beach Ed Pro Roma\, Beach Sports Chiavari\, GTA - GranTeam Academy\, RB
+ T SCHOOL Ellebi Agenzia Pratiche Auto e Assicurazioni\nIndirizzo: Via Feli
+ ce Lope de Vega 35\, Milano\nMappa: https://www.google.com/maps/search/?ap
+ i=1&query=45.439368\,9.163077
+URL:https://clubseries.app/campionato/tappa/607
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clubseries-b07dd58d6315657c@beach-calendar-roma
+DTSTAMP:20261117T164732Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Club Series · Serie A M\, Serie Elite M · Smash Sport City · Pes
+ aro · RBT
+LOCATION:Smash Sport City\, Via Toscana\, 109\, Pesaro
+DESCRIPTION:🔗 Dettaglio tappa:\n• Serie A M G1-C: https://clubseries.a
+ pp/campionato/tappa/593\n• Serie Elite M G1-C: https://clubseries.app/ca
+ mpionato/tappa/594\n\nCircuito: AIBVC Club Series\nCategorie: Serie A M\, 
+ Serie Elite M\nSquadre RBT: RBT SCHOOL Fisiocipro\, RBT SCHOOL Teti Arreda
+ menti\nSerie A M G1-C – squadre: Real Beach\, RBT SCHOOL Teti Arredament
+ i\, Mattabel Budget Bro\, Beach Volley Zone BTB Broker\nSerie Elite M G1-C
+  – squadre: Real Beach\, RBT SCHOOL Fisiocipro\, Mattabel EPT\, Beach Vo
+ lley Zone Fait\nIndirizzo: Via Toscana\, 109\, Pesaro\nMappa: https://www.
+ google.com/maps/search/?api=1&query=43.902782\,12.877585
+URL:https://clubseries.app/campionato/tappa/593
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:fipav-7defd7aa806bed41@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:FIPAV Società · Under 14 M+F\, Under 16 M+F\, Under 18 M+F\, Unde
@@ -414,7 +742,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-5706d619e475979a@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:FIPAV Società · Bronze M+F · HERO SSD ARL
@@ -430,7 +758,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-e8b36d43f2756e58@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:FIPAV Società · Beginners M+F · BEACH VOLLEY ACADEMY
@@ -446,7 +774,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-25ac12a557d68c13@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270103
 DTEND;VALUE=DATE:20270104
 SUMMARY:FIPAV Società · Silver M+F · BEACH VOLLEY ACADEMY
@@ -462,7 +790,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-4583c43714ec7b59@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270103
 DTEND;VALUE=DATE:20270104
 SUMMARY:FIPAV Società · Beginners M+F · WE BEACH ITALIA SSD A RL
@@ -478,7 +806,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-ed950af4f4e0428e@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:FIPAV Società · Bronze M+F · ASD ROMABEACHTOUR
@@ -494,7 +822,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-c360a499cbbe7be9@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:FIPAV Società · Gold M+F\, Master 35 F\, Master 45 M\, Master 55 
@@ -515,7 +843,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-856c4f869a1863a3@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:FIPAV Società · Beginners M+F · BEACH VOLLEY ZONE S.S.D.A R.L.
@@ -531,7 +859,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-a4dccec90fbf8645@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:FIPAV Società · Bronze M+F · WE BEACH ITALIA SSD A RL
@@ -547,7 +875,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-44a6afc03e01b635@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:FIPAV Società · Silver M+F · ASD ROMABEACHTOUR
@@ -563,7 +891,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-c32c52475c186acf@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270124
 DTEND;VALUE=DATE:20270125
 SUMMARY:FIPAV Società · Gold M+F · ASD ROMABEACHTOUR
@@ -579,7 +907,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fipav-0ba40a0edd7cd2e8@beach-calendar-roma
-DTSTAMP:20261117T155528Z
+DTSTAMP:20261117T164732Z
 DTSTART;VALUE=DATE:20270130
 DTEND;VALUE=DATE:20270131
 SUMMARY:FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP
