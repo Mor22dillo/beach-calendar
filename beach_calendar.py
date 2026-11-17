@@ -301,6 +301,106 @@ def fipav_to_torneo(gruppo: list[dict]) -> Torneo:
     )
 
 
+# --- AIBVC Club Series (solo tappe con squadre del club scelto, es. RBT) -------
+CLUBSERIES_API = "https://api.clubseries.app/api/championship"
+CLUBSERIES_LINK = "https://clubseries.app/campionato/tappa/{id}"
+
+
+def _squadra_del_club(sq: dict, pattern: str) -> bool:
+    return bool(re.search(pattern, f"{sq.get('nomeCorto') or ''} {sq.get('nomeSquadra') or ''}", re.I))
+
+
+def fetch_clubseries(oggi: dt.date, club: str) -> list[Torneo]:
+    from concurrent.futures import ThreadPoolExecutor
+    pattern = rf"\b{re.escape(club)}\b"
+    tornei = [t for t in get_json(f"{CLUBSERIES_API}/tournaments") if not t.get("archivia")]
+
+    def dettaglio_torneo(t):
+        d = get_json(f"{CLUBSERIES_API}/tournaments/{t['idEdizioneTorneo']}")
+        return [dict(tp, _categoria=t.get("nome", ""), _genere=t.get("genere", "")) for tp in d.get("tappe", [])]
+
+    with ThreadPoolExecutor(6) as ex:
+        tappe = [tp for lst in ex.map(dettaglio_torneo, tornei) for tp in lst]
+    tappe = [tp for tp in tappe if (tp.get("dataFine") or tp.get("dataInizio") or "")[:10] >= oggi.isoformat()
+             and tp.get("online", 1)]
+
+    def dettaglio_tappa(tp):
+        st = get_json(f"{CLUBSERIES_API}/stages/{tp['idTappa']}")
+        squadre = [sq for gir in (st.get("gironi") or {}).values() for sq in gir]
+        mie = [sq for sq in squadre if _squadra_del_club(sq, pattern)]
+        return (tp, st, squadre, mie) if mie else None
+
+    with ThreadPoolExecutor(6) as ex:
+        trovate = [x for x in ex.map(dettaglio_tappa, tappe) if x]
+
+    # Raggruppa: stessa data e stesso impianto = un solo evento
+    gruppi: dict[str, list] = {}
+    for x in trovate:
+        tp = x[0]
+        k = f"{tp['dataInizio'][:10]}|{tp.get('idLuogo')}"
+        gruppi.setdefault(k, []).append(x)
+    return [clubseries_to_torneo(g, club) for g in gruppi.values()]
+
+
+def _cat_cs(nome: str) -> str:
+    # "OVER 35 F" -> "Over 35 F", "SERIE A M" -> "Serie A M"
+    return " ".join(w if len(w) <= 1 or w.isdigit() else w.capitalize() for w in nome.split())
+
+
+def clubseries_to_torneo(gruppo: list, club: str) -> Torneo:
+    gruppo = sorted(gruppo, key=lambda x: (x[0]["_categoria"], x[0]["nome"]))
+    tp0, st0 = gruppo[0][0], gruppo[0][1]
+    sede = st0.get("sede") or {}
+    impianto = tp0.get("nomeImpianto") or sede.get("nome") or st0.get("nomeLuogo") or ""
+    comune = (tp0.get("citta") or sede.get("citta") or "").strip().title()
+    inizio = dt.date.fromisoformat(tp0["dataInizio"][:10])
+    fine = dt.date.fromisoformat((tp0.get("dataFine") or tp0["dataInizio"])[:10]) + dt.timedelta(days=1)
+
+    categorie = sorted({_cat_cs(x[0]["_categoria"]) for x in gruppo})
+    generi = sorted({(x[0].get("_genere") or "?")[0].upper() for x in gruppo})
+    mie = sorted({sq.get("nomeSquadra") or sq.get("nomeCorto") for x in gruppo for sq in x[3]})
+    citta = fuori_roma(comune)
+
+    titolo = f"Club Series · {', '.join(categorie)} · {impianto}"
+    if citta:
+        titolo += f" · {citta}"
+    titolo += f" · {club}"
+
+    links = [{"label": f"{_cat_cs(x[0]['_categoria'])} {x[0]['nome'].replace('RAGGRUPPAMENTO ', '')}",
+              "url": CLUBSERIES_LINK.format(id=x[0]["idTappa"]),
+              "genere": (x[0].get("_genere") or "?")[0].upper()} for x in gruppo]
+    righe = ["🔗 Dettaglio tappa:"] + [f"• {l['label']}: {l['url']}" for l in links]
+    righe += ["", "Circuito: AIBVC Club Series", "Categorie: " + ", ".join(categorie),
+              f"Squadre {club}: " + ", ".join(mie)]
+    for x in gruppo:
+        nomi = [sq.get("nomeSquadra") or sq.get("nomeCorto") for sq in x[2]]
+        righe.append(f"{_cat_cs(x[0]['_categoria'])} {x[0]['nome'].replace('RAGGRUPPAMENTO ', '')} – squadre: " + ", ".join(nomi))
+    indirizzo = ", ".join(v for v in [sede.get("indirizzo"), sede.get("citta")] if v)
+    if indirizzo:
+        righe.append(f"Indirizzo: {indirizzo}")
+    if sede.get("mapsUrl"):
+        righe.append(f"Mappa: {sede['mapsUrl']}")
+
+    key_src = f"{tp0['dataInizio'][:10]}|{tp0.get('idLuogo')}"
+    corti = ", ".join(m.replace(club, "").replace("SCHOOL", "").strip() or m for m in mie)
+    return Torneo(
+        key="clubseries:" + hashlib.sha1(key_src.encode()).hexdigest()[:16],
+        titolo=titolo, inizio=inizio, fine=fine,
+        luogo=", ".join(v for v in [impianto, sede.get("indirizzo"), comune] if v),
+        descrizione="\n".join(righe), link=links[0]["url"], fonte="clubseries",
+        riga_telegram=(f"{fmt_giorno(inizio)} · <b>Club Series {html.escape(', '.join(categorie))}</b> · "
+                       f"{html.escape(impianto)}" + (f" · 📍{html.escape(citta)}" if citta else "")
+                       + f" · 👥 {html.escape(corti)}"),
+        impronta={"t": titolo, "s": inizio, "e": fine, "c": categorie, "m": mie},
+        info={
+            "fonte": "AIBVC", "circuito": "Club Series", "nome": impianto, "categorie": categorie,
+            "generi": generi, "citta": comune, "impianto": impianto if impianto != comune else "",
+            "indirizzo": sede.get("indirizzo") or "", "squadre_club": mie, "club": club,
+            "links": links,
+        },
+    )
+
+
 # --- Date ---------------------------------------------------------------------
 GIORNI = ["lun", "mar", "mer", "gio", "ven", "sab", "dom"]
 
@@ -494,6 +594,7 @@ def build_pagina(state: dict, zona: str, now: dt.datetime) -> str:
     return (PAGINA_HTML.replace("__ZONA_TITOLO__", titolo)
             .replace("__AGGIORNATO__", now.strftime("%d/%m/%Y alle %H:%M"))
             .replace("__REPO__", os.environ.get("GITHUB_REPOSITORY", ""))
+            .replace("__CLUB__", html.escape((os.environ.get("CLUB_SERIES_SQUADRA") or "RBT").strip()))
             .replace("__DATI__", js))
 
 
@@ -561,6 +662,7 @@ PAGINA_HTML = r"""<!DOCTYPE html>
   .badge.warn { background: #fde2e2; color: #b42318; }
   .name { font-weight: 650; font-size: 16px; }
   .cats { font-size: 13px; color: var(--ink); margin-top: 2px; }
+  .club { font-size: 13px; font-weight: 600; color: #2e7d32; margin-top: 2px; }
   .where { font-size: 13px; color: var(--muted); margin-top: 2px; }
   .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .links a { font-size: 12px; text-decoration: none; color: var(--sea); border: 1px solid #b9dbe5; border-radius: 8px; padding: 4px 9px; background: #f6fbfc; }
@@ -596,7 +698,7 @@ PAGINA_HTML = r"""<!DOCTYPE html>
   <div class="wrap">
     <div>
       <h1>🏐 Tornei beach volley __ZONA_TITOLO__</h1>
-      <div class="sub">AIBVC (L1, L2, CNT) e FIPAV (Assoluto, Serie Beach, Società) · aggiornato il __AGGIORNATO__</div>
+      <div class="sub">AIBVC (L1, L2, CNT, Club Series con squadre __CLUB__) e FIPAV (Assoluto, Serie Beach, Società) · aggiornato il __AGGIORNATO__</div>
     </div>
     <button class="agg" id="agg">🔄 Aggiorna ora</button>
   </div>
@@ -652,7 +754,7 @@ const OGGI = new Date(); OGGI.setHours(0,0,0,0);
 const GIORNI = ["dom","lun","mar","mer","gio","ven","sab"];
 const MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
 const CIRCUITI = [
-  ["AIBVC","L1","AIBVC L1"],["AIBVC","L2","AIBVC L2"],["AIBVC","CNT","AIBVC CNT"],
+  ["AIBVC","L1","AIBVC L1"],["AIBVC","L2","AIBVC L2"],["AIBVC","CNT","AIBVC CNT"],["AIBVC","Club Series","AIBVC Club Series"],
   ["FIPAV","Assoluto","FIPAV Assoluto"],["FIPAV","Serie Beach","FIPAV Serie Beach"],["FIPAV","Società","FIPAV Società"]];
 const GENERI = [["M","Maschile"],["F","Femminile"]];
 
@@ -663,7 +765,7 @@ const T = DATI.map(r => {
   const eExcl = r.all_day ? new Date(r.end + "T00:00:00") : new Date(r.end);
   const e = r.all_day ? new Date(eExcl.getTime() - 86400000) : eExcl;
   const cKey = (i.fonte || "") + "|" + (i.circuito || "");
-  const testo = [i.nome, i.citta, i.impianto, i.indirizzo, i.organizzatore, (i.categorie||[]).join(" "), i.fonte, i.circuito, r.summary]
+  const testo = [(i.squadre_club || []).join(" "), i.nome, i.citta, i.impianto, i.indirizzo, i.organizzatore, (i.categorie||[]).join(" "), i.fonte, i.circuito, r.summary]
       .filter(Boolean).join(" ").toLowerCase();
   return { r, i, s, e, cKey, testo };
 }).sort((a,b) => a.s - b.s);
@@ -784,7 +886,8 @@ function render() {
             ${i.sospeso ? '<span class="badge warn">SOSPESO</span>' : ""}
           </div>
           <div class="name">${esc(i.nome || t.r.summary)}</div>
-          ${f ? `<div class="cats">${esc((i.categorie || []).join(", "))}</div>` : ""}
+          ${(f || i.circuito === "Club Series") ? `<div class="cats">${esc((i.categorie || []).join(", "))}</div>` : ""}
+          ${(i.squadre_club || []).length ? `<div class="club">👥 ${esc(i.squadre_club.join(", "))}</div>` : ""}
           <div class="where">📍 ${esc(dove || t.r.location)}</div>
           ${extra.length ? `<div class="where">${esc(extra.join(" · "))}</div>` : ""}
           <div class="links">${links}</div>
@@ -883,7 +986,7 @@ syncInputs(); render();
 def build_messages(nuovi, modificati, rimossi, errori, cal_link: str | None, dove: str = "nel Lazio") -> list[str]:
     blocchi = []
     if nuovi:
-        blocchi.append(f"🏐 <b>{len(nuovi)} nuov{'o torneo' if len(nuovi) == 1 else 'i tornei'} {dove}</b>")
+        blocchi.append(f"🏐 <b>{len(nuovi)} nuov{'o torneo' if len(nuovi) == 1 else 'i tornei'}</b>")
         blocchi += ["• " + t.riga_telegram for t in sorted(nuovi, key=sort_key)]
     if modificati:
         blocchi.append(f"\n✏️ <b>Aggiornati ({len(modificati)})</b>")
@@ -930,12 +1033,16 @@ def main() -> int:
     now = dt.datetime.now(TZ)
 
     tornei, fonti_ok, errori = [], set(), []
-    for nome, fn in (("aibvc", lambda: fetch_aibvc(zona)), ("fipav", lambda: fetch_fipav(zona, now.date()))):
+    club = (os.environ.get("CLUB_SERIES_SQUADRA") or "RBT").strip()
+    fonti = [("aibvc", lambda: fetch_aibvc(zona)), ("fipav", lambda: fetch_fipav(zona, now.date()))]
+    if club.lower() not in ("", "no", "off"):
+        fonti.append(("clubseries", lambda: fetch_clubseries(now.date(), club)))
+    for nome, fn in fonti:
         try:
             res = fn()
             tornei += res
             fonti_ok.add(nome)
-            print(f"{nome.upper()}: {len(res)} tornei {ZONA_LABEL[zona]}")
+            print(f"{nome.upper()}: {len(res)} tornei " + (f"con squadre {club}" if nome == "clubseries" else ZONA_LABEL[zona]))
         except Exception as ex:  # una fonte giù non deve bloccare l'altra
             errori.append(f"{nome.upper()} non raggiungibile: {ex}")
             print(f"ERRORE {nome}: {ex}", file=sys.stderr)
