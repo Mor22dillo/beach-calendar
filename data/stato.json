@@ -136,6 +136,74 @@
    "summary": "AIBVC L1 F · Palaibeach Casetta Bianca",
    "url": "https://aibvc.app/tournament/6ad5dc61352fd41bfd6a3d42"
   },
+  "aibvc:6afc1cc7058b884cb17aa4ca": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afc1cc7058b884cb17aa4ca\n\nCircuito: AIBVC CNT L1\nGenere: M\nQuota: 50 € / coppia\nScadenza iscrizioni: 04/12/2026 12:00",
+   "end": "2026-12-06T19:00:00+01:00",
+   "hash": "1c73ae5f7cc85a28",
+   "info": {
+    "categorie": [
+     "CNT L1"
+    ],
+    "circuito": "CNT",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "M"
+    ],
+    "impianto": "Play Selva Candida",
+    "indirizzo": "Via Guglielmo Girardi, 250",
+    "links": [
+     {
+      "genere": "M",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6afc1cc7058b884cb17aa4ca"
+     }
+    ],
+    "nome": "CNT - Play Selva Candida",
+    "quota": 50,
+    "scadenza": "2026-12-04T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Play Selva Candida, Via Guglielmo Girardi, 250, Roma",
+   "start": "2026-12-06T09:30:00+01:00",
+   "summary": "AIBVC CNT L1 M · CNT - Play Selva Candida",
+   "url": "https://aibvc.app/tournament/6afc1cc7058b884cb17aa4ca"
+  },
+  "aibvc:6afc1dec058b884cb17abbdf": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afc1dec058b884cb17abbdf\n\nCircuito: AIBVC CNT L1\nGenere: F\nQuota: 50 € / coppia\nScadenza iscrizioni: 03/12/2026 12:00",
+   "end": "2026-12-05T19:00:00+01:00",
+   "hash": "8eb1c90183a2140a",
+   "info": {
+    "categorie": [
+     "CNT L1"
+    ],
+    "circuito": "CNT",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "F"
+    ],
+    "impianto": "Play Selva Candida",
+    "indirizzo": "Via Guglielmo Girardi, 250",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6afc1dec058b884cb17abbdf"
+     }
+    ],
+    "nome": "CNT -Play Selva Candida",
+    "quota": 50,
+    "scadenza": "2026-12-03T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Play Selva Candida, Via Guglielmo Girardi, 250, Roma",
+   "start": "2026-12-05T09:30:00+01:00",
+   "summary": "AIBVC CNT L1 F · CNT -Play Selva Candida",
+   "url": "https://aibvc.app/tournament/6afc1dec058b884cb17abbdf"
+  },
   "fipav:0ba40a0edd7cd2e8": {
    "all_day": true,
    "description": "🔗 Dettaglio tappa:\n• Silver F: https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12653\n• Silver M: https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12652\n\nCircuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: ASD BEACH VOLLEY CAMP\nLocalità: Roma",
@@ -1326,45 +1394,6 @@
    "summary": "FIPAV Società · Bronze M+F · ASD ROMABEACHTOUR",
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12579"
   },
-  "fipav:f22e223ecb1c94db": {
-   "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Beginners F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12708\n• Beginners M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12707\n\nCircuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: BAMBOO BEACH VOLLEY S.S.D.R.L.\nLocalità: Roma",
-   "end": "2026-11-22",
-   "hash": "7dbfe5c85ca71ffc",
-   "info": {
-    "categorie": [
-     "Beginners M+F"
-    ],
-    "circuito": "Società",
-    "citta": "Roma",
-    "fonte": "FIPAV",
-    "generi": [
-     "F",
-     "M"
-    ],
-    "impianto": "",
-    "indirizzo": "",
-    "links": [
-     {
-      "genere": "F",
-      "label": "Beginners F",
-      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12708"
-     },
-     {
-      "genere": "M",
-      "label": "Beginners M",
-      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12707"
-     }
-    ],
-    "nome": "BAMBOO BEACH VOLLEY S.S.D.R.L.",
-    "organizzatore": "BAMBOO BEACH VOLLEY S.S.D.R.L.",
-    "provincia": "Roma"
-   },
-   "location": "BAMBOO BEACH VOLLEY S.S.D.R.L., Roma",
-   "start": "2026-11-21",
-   "summary": "FIPAV Società · Beginners M+F · BAMBOO BEACH VOLLEY S.S.D.R.L.",
-   "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12708"
-  },
   "fipav:f30aff4075f635e5": {
    "all_day": true,
    "description": "🔗 Dettaglio tappa:\n• Beginners F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12565\n• Beginners M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12566\n\nCircuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: WE BEACH ITALIA SSD A RL\nLocalità: Roma",
@@ -1444,5 +1473,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-16T16:36+01:00"
+ "ultimo_controllo": "2026-11-17T16:55+01:00"
 }
