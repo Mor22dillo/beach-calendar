@@ -204,18 +204,51 @@
    "summary": "AIBVC CNT L1 F · CNT -Play Selva Candida",
    "url": "https://aibvc.app/tournament/6afc1dec058b884cb17abbdf"
   },
-  "clubseries:0e816754c157c3bd": {
-   "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Eccellenza M G1-N: https://clubseries.app/campionato/tappa/692\n\nCircuito: AIBVC Club Series\nCategorie: Eccellenza M\nSquadre RBT: RBT SCHOOL Real Sporting Village\nEccellenza M G1-N – squadre: Ibeach Albos Club Fregene, Beach Volley Academy, OBEYA Of Occhiali, RBT SCHOOL Real Sporting Village, Sport Sun Agrinnova, We Beach Club IBILL\nIndirizzo: via Busto Arsizio, 31, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.996787,12.474509",
-   "end": "2026-11-30",
-   "hash": "5545d6bf683599be",
+  "aibvc:6afdd19785d127dbafe896bf": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd19785d127dbafe896bf\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 27/11/2026 12:00",
+   "end": "2026-11-29T22:22:00+01:00",
+   "hash": "643ee403a90ec583",
    "info": {
     "categorie": [
-     "Eccellenza M"
+     "L2"
     ],
-    "circuito": "Club Series",
+    "circuito": "L2",
     "citta": "Roma",
-    "club": "RBT",
+    "fonte": "AIBVC",
+    "generi": [
+     "F"
+    ],
+    "impianto": "Ibeach Arena Dabliu",
+    "indirizzo": "via Busto Arsizio, 31",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6afdd19785d127dbafe896bf"
+     }
+    ],
+    "nome": "Ibeach Arena Dabliu Colli D'oro",
+    "quota": 40,
+    "scadenza": "2026-11-27T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Ibeach Arena Dabliu, via Busto Arsizio, 31, Roma",
+   "start": "2026-11-29T09:30:00+01:00",
+   "summary": "AIBVC L2 F · Ibeach Arena Dabliu Colli D'oro",
+   "url": "https://aibvc.app/tournament/6afdd19785d127dbafe896bf"
+  },
+  "aibvc:6afdd1f485d127dbafe8a215": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd1f485d127dbafe8a215\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 27/11/2026 12:00",
+   "end": "2026-11-29T22:22:00+01:00",
+   "hash": "01c525af50d8820a",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "Roma",
     "fonte": "AIBVC",
     "generi": [
      "M"
@@ -225,19 +258,19 @@
     "links": [
      {
       "genere": "M",
-      "label": "Eccellenza M G1-N",
-      "url": "https://clubseries.app/campionato/tappa/692"
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6afdd1f485d127dbafe8a215"
      }
     ],
-    "nome": "Ibeach Arena Dabliu",
-    "squadre_club": [
-     "RBT SCHOOL Real Sporting Village"
-    ]
+    "nome": "Ibeach Arena Dabliu Colli D'oro",
+    "quota": 40,
+    "scadenza": "2026-11-27T12:00:00+01:00",
+    "sospeso": false
    },
    "location": "Ibeach Arena Dabliu, via Busto Arsizio, 31, Roma",
-   "start": "2026-11-29",
-   "summary": "Club Series · Eccellenza M · Ibeach Arena Dabliu · RBT",
-   "url": "https://clubseries.app/campionato/tappa/692"
+   "start": "2026-11-29T14:00:00+01:00",
+   "summary": "AIBVC L2 M · Ibeach Arena Dabliu Colli D'oro",
+   "url": "https://aibvc.app/tournament/6afdd1f485d127dbafe8a215"
   },
   "clubseries:117340183b7ab561": {
    "all_day": true,
@@ -276,7 +309,7 @@
   },
   "clubseries:1d9d39de5aec3f60": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Promozione F G1-AB: https://clubseries.app/campionato/tappa/788\n\nCircuito: AIBVC Club Series\nCategorie: Promozione F\nSquadre RBT: RBT SCHOOL Tajo Restaurant\nPromozione F G1-AB – squadre: Beach Volley Academy, Beach Volley Zone CS Revolution, Paradise Beach City - Verde, RBT SCHOOL Tajo Restaurant, We Beach Club DE IAPINIS\nIndirizzo: Via Álvaro del Portillo, 282, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.769682,12.467274",
+   "description": "🔗 Dettaglio tappa:\n• Promozione F G1-AB: https://clubseries.app/campionato/tappa/788\n\nCircuito: AIBVC Club Series\nCategorie: Promozione F\nSquadre RBT: RBT SCHOOL Tajo Restaurant\nPromozione F G1-AB – squadre: Beach Volley Academy Veraclub, Beach Volley Zone CS Revolution, Paradise Beach City - Verde, RBT SCHOOL Tajo Restaurant, We Beach Club DE IAPINIS\nIndirizzo: Via Álvaro del Portillo, 282, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.769682,12.467274",
    "end": "2026-11-23",
    "hash": "7a39b897edc036dc",
    "info": {
@@ -568,6 +601,41 @@
    "summary": "Club Series · Over 35 F · Ibeach Arena Dabliu · RBT",
    "url": "https://clubseries.app/campionato/tappa/725"
   },
+  "clubseries:6d60914d6275e884": {
+   "all_day": true,
+   "description": "🔗 Dettaglio tappa:\n• Eccellenza M G1-N: https://clubseries.app/campionato/tappa/692\n\nCircuito: AIBVC Club Series\nCategorie: Eccellenza M\nSquadre RBT: RBT SCHOOL Real Sporting Village\nEccellenza M G1-N – squadre: Ibeach Albos Club Fregene, Beach Volley Academy, OBEYA Of Occhiali, RBT SCHOOL Real Sporting Village, Sport Sun Agrinnova, We Beach Club IBILL\nIndirizzo: Via Martiri Della Storta, 40, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.989147,12.408067",
+   "end": "2026-11-30",
+   "hash": "65bba22378e3730e",
+   "info": {
+    "categorie": [
+     "Eccellenza M"
+    ],
+    "circuito": "Club Series",
+    "citta": "Roma",
+    "club": "RBT",
+    "fonte": "AIBVC",
+    "generi": [
+     "M"
+    ],
+    "impianto": "Pala Ibeach Casetta Bianca",
+    "indirizzo": "Via Martiri Della Storta, 40",
+    "links": [
+     {
+      "genere": "M",
+      "label": "Eccellenza M G1-N",
+      "url": "https://clubseries.app/campionato/tappa/692"
+     }
+    ],
+    "nome": "Pala Ibeach Casetta Bianca",
+    "squadre_club": [
+     "RBT SCHOOL Real Sporting Village"
+    ]
+   },
+   "location": "Pala Ibeach Casetta Bianca, Via Martiri Della Storta, 40, Roma",
+   "start": "2026-11-29",
+   "summary": "Club Series · Eccellenza M · Pala Ibeach Casetta Bianca · RBT",
+   "url": "https://clubseries.app/campionato/tappa/692"
+  },
   "clubseries:7801b5a546cc2e11": {
    "all_day": true,
    "description": "🔗 Dettaglio tappa:\n• Promozione M G1-AC: https://clubseries.app/campionato/tappa/582\n\nCircuito: AIBVC Club Series\nCategorie: Promozione M\nSquadre RBT: RBT SCHOOL Pinetina Ostia\nPromozione M G1-AC – squadre: Ibeach Albos Club Fregene, Alfabravo, Beach Volley Terni BLU, Hero Beach Volley Hero Blu, Beach Volley Zone Professionisti Immobiliari, RBT SCHOOL Pinetina Ostia\nIndirizzo: Via Martiri Della Storta, 40, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.989147,12.408067",
@@ -640,7 +708,7 @@
   },
   "clubseries:7f3e652a152d4e4e": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Promozione F G1-AA: https://clubseries.app/campionato/tappa/787\n\nCircuito: AIBVC Club Series\nCategorie: Promozione F\nSquadre RBT: RBT SCHOOL Bono Burger\nPromozione F G1-AA – squadre: Ibeach Share My Boat, BAMBOO BEACH VOLLEY S.S.D.A.R.L. Viola, Beach Volley Academy, DDS, Urban Beach Ed Pro Roma White, RBT SCHOOL Bono Burger\nIndirizzo: Via Martiri Della Storta, 40, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.989147,12.408067",
+   "description": "🔗 Dettaglio tappa:\n• Promozione F G1-AA: https://clubseries.app/campionato/tappa/787\n\nCircuito: AIBVC Club Series\nCategorie: Promozione F\nSquadre RBT: RBT SCHOOL Bono Burger\nPromozione F G1-AA – squadre: Ibeach Share My Boat, BAMBOO BEACH VOLLEY S.S.D.A.R.L. Viola, Beach Volley Academy MED, DDS, Urban Beach Ed Pro Roma White, RBT SCHOOL Bono Burger\nIndirizzo: Via Martiri Della Storta, 40, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.989147,12.408067",
    "end": "2026-11-22",
    "hash": "91acf8188f91966b",
    "info": {
@@ -710,7 +778,7 @@
   },
   "clubseries:a02c045b60adb41a": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Promozione F G1-Z: https://clubseries.app/campionato/tappa/786\n\nCircuito: AIBVC Club Series\nCategorie: Promozione F\nSquadre RBT: RBT SCHOOL Kaya Lounge Bar\nPromozione F G1-Z – squadre: Beach Volley Academy, Beach Volley Zone Carrozzeria Pisegna, Urban Beach Ed Pro Roma Black, Paradise Beach City - Bianco, RBT SCHOOL Kaya Lounge Bar\nIndirizzo: Via Degli Aldobrandeschi, 115, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.877697,12.397401",
+   "description": "🔗 Dettaglio tappa:\n• Promozione F G1-Z: https://clubseries.app/campionato/tappa/786\n\nCircuito: AIBVC Club Series\nCategorie: Promozione F\nSquadre RBT: RBT SCHOOL Kaya Lounge Bar\nPromozione F G1-Z – squadre: Beach Volley Academy Effepiu', Beach Volley Zone Carrozzeria Pisegna, Urban Beach Ed Pro Roma Black, Paradise Beach City - Bianco, RBT SCHOOL Kaya Lounge Bar\nIndirizzo: Via Degli Aldobrandeschi, 115, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.877697,12.397401",
    "end": "2026-11-23",
    "hash": "88aa8c18056dfbf3",
    "info": {
@@ -1408,6 +1476,45 @@
    "summary": "FIPAV Società · Silver M+F · BEACH VOLLEY ZONE S.S.D.A R.L.",
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12525"
   },
+  "fipav:646bab8ea711b312": {
+   "all_day": true,
+   "description": "🔗 Dettaglio tappa:\n• Beginners F: https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12712\n• Beginners M: https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12711\n\nCircuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: BAMBOO BEACH VOLLEY S.S.D.R.L.\nLocalità: Roma",
+   "end": "2027-01-18",
+   "hash": "747fdb5c4cf24490",
+   "info": {
+    "categorie": [
+     "Beginners M+F"
+    ],
+    "circuito": "Società",
+    "citta": "Roma",
+    "fonte": "FIPAV",
+    "generi": [
+     "F",
+     "M"
+    ],
+    "impianto": "",
+    "indirizzo": "",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Beginners F",
+      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12712"
+     },
+     {
+      "genere": "M",
+      "label": "Beginners M",
+      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLM12711"
+     }
+    ],
+    "nome": "BAMBOO BEACH VOLLEY S.S.D.R.L.",
+    "organizzatore": "BAMBOO BEACH VOLLEY S.S.D.R.L.",
+    "provincia": "Roma"
+   },
+   "location": "BAMBOO BEACH VOLLEY S.S.D.R.L., Roma",
+   "start": "2027-01-17",
+   "summary": "FIPAV Società · Beginners M+F · BAMBOO BEACH VOLLEY S.S.D.R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12712"
+  },
   "fipav:64d6b38d8fbfe124": {
    "all_day": true,
    "description": "🔗 Dettaglio tappa:\n• Silver F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12609\n• Silver M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12608\n\nCircuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: PARADISE BEACH CITY SSD RL\nLocalità: Roma",
@@ -1967,6 +2074,45 @@
    "summary": "FIPAV Società · Master 35 F, Master 45 M · ASD BEACH VOLLEY CAMP",
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12650"
   },
+  "fipav:e4a2adc82fa813ac": {
+   "all_day": true,
+   "description": "🔗 Dettaglio tappa:\n• Silver F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12710\n• Silver M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12709\n\nCircuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: BAMBOO BEACH VOLLEY S.S.D.R.L.\nLocalità: Roma",
+   "end": "2026-12-21",
+   "hash": "4c22b66e0ad0b8c2",
+   "info": {
+    "categorie": [
+     "Silver M+F"
+    ],
+    "circuito": "Società",
+    "citta": "Roma",
+    "fonte": "FIPAV",
+    "generi": [
+     "F",
+     "M"
+    ],
+    "impianto": "",
+    "indirizzo": "",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Silver F",
+      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12710"
+     },
+     {
+      "genere": "M",
+      "label": "Silver M",
+      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12709"
+     }
+    ],
+    "nome": "BAMBOO BEACH VOLLEY S.S.D.R.L.",
+    "organizzatore": "BAMBOO BEACH VOLLEY S.S.D.R.L.",
+    "provincia": "Roma"
+   },
+   "location": "BAMBOO BEACH VOLLEY S.S.D.R.L., Roma",
+   "start": "2026-12-20",
+   "summary": "FIPAV Società · Silver M+F · BAMBOO BEACH VOLLEY S.S.D.R.L.",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12710"
+  },
   "fipav:e8b36d43f2756e58": {
    "all_day": true,
    "description": "🔗 Dettaglio tappa:\n• Beginners F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12510\n• Beginners M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12511\n\nCircuito: FIPAV – Società\nCategorie: Beginners M+F\nOrganizzatore: BEACH VOLLEY ACADEMY\nLocalità: Roma",
@@ -2157,5 +2303,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-18T16:34+01:00"
+ "ultimo_controllo": "2026-11-19T16:40+01:00"
 }
