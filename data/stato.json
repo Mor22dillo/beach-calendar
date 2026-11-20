@@ -68,6 +68,74 @@
    "summary": "AIBVC CNT L2 M · CNT - PalaBVA",
    "url": "https://aibvc.app/tournament/6abbaee35748aace3da89a66"
   },
+  "aibvc:6ad5d60a352fd41bfd681568": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6ad5d60a352fd41bfd681568\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 04/12/2026 12:00",
+   "end": "2026-12-06T15:00:00+01:00",
+   "hash": "cc51a9bbee332bb3",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "F"
+    ],
+    "impianto": "Borussia Village",
+    "indirizzo": "Via Franco Tosi 19",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6ad5d60a352fd41bfd681568"
+     }
+    ],
+    "nome": "BVZ - Borussia Village",
+    "quota": 40,
+    "scadenza": "2026-12-04T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Borussia Village, Via Franco Tosi 19, Roma",
+   "start": "2026-12-06T09:00:00+01:00",
+   "summary": "AIBVC L2 F · BVZ - Borussia Village",
+   "url": "https://aibvc.app/tournament/6ad5d60a352fd41bfd681568"
+  },
+  "aibvc:6ad5d663352fd41bfd682177": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6ad5d663352fd41bfd682177\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 04/12/2026 12:00",
+   "end": "2026-12-06T20:00:00+01:00",
+   "hash": "285a14fc6a4c6f36",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "M"
+    ],
+    "impianto": "Borussia Village",
+    "indirizzo": "Via Franco Tosi 19",
+    "links": [
+     {
+      "genere": "M",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6ad5d663352fd41bfd682177"
+     }
+    ],
+    "nome": "BVZ - Borussia Village",
+    "quota": 40,
+    "scadenza": "2026-12-04T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Borussia Village, Via Franco Tosi 19, Roma",
+   "start": "2026-12-06T14:00:00+01:00",
+   "summary": "AIBVC L2 M · BVZ - Borussia Village",
+   "url": "https://aibvc.app/tournament/6ad5d663352fd41bfd682177"
+  },
   "aibvc:6ad5dc5b352fd41bfd6a3a95": {
    "all_day": false,
    "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6ad5dc5b352fd41bfd6a3a95\n\nCircuito: AIBVC L1\nGenere: M\nQuota: 50 € / coppia\nScadenza iscrizioni: 13/11/2026 20:00",
@@ -135,6 +203,74 @@
    "start": "2026-11-15T10:00:00+01:00",
    "summary": "AIBVC L1 F · Palaibeach Casetta Bianca",
    "url": "https://aibvc.app/tournament/6ad5dc61352fd41bfd6a3d42"
+  },
+  "aibvc:6aef3e61c6fe7b92c1779092": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6aef3e61c6fe7b92c1779092\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 06/12/2026 12:00",
+   "end": "2026-12-08T14:00:00+01:00",
+   "hash": "86579c8df08d631f",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "ROMA",
+    "fonte": "AIBVC",
+    "generi": [
+     "F"
+    ],
+    "impianto": "Dabliu Eur Sport Club",
+    "indirizzo": "Viale Egeo, 98",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6aef3e61c6fe7b92c1779092"
+     }
+    ],
+    "nome": "HERO - Dabliu Eur",
+    "quota": 40,
+    "scadenza": "2026-12-06T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Dabliu Eur Sport Club, Viale Egeo, 98, ROMA",
+   "start": "2026-12-08T09:30:00+01:00",
+   "summary": "AIBVC L2 F · HERO - Dabliu Eur",
+   "url": "https://aibvc.app/tournament/6aef3e61c6fe7b92c1779092"
+  },
+  "aibvc:6aef3eadc6fe7b92c177bdf1": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6aef3eadc6fe7b92c177bdf1\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 06/12/2026 12:00",
+   "end": "2026-12-08T19:00:00+01:00",
+   "hash": "d01755770dad1814",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "ROMA",
+    "fonte": "AIBVC",
+    "generi": [
+     "M"
+    ],
+    "impianto": "Dabliu Eur Sport Club",
+    "indirizzo": "Viale Egeo, 98",
+    "links": [
+     {
+      "genere": "M",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6aef3eadc6fe7b92c177bdf1"
+     }
+    ],
+    "nome": "HERO - Dabliu Eur",
+    "quota": 40,
+    "scadenza": "2026-12-06T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Dabliu Eur Sport Club, Viale Egeo, 98, ROMA",
+   "start": "2026-12-08T14:00:00+01:00",
+   "summary": "AIBVC L2 M · HERO - Dabliu Eur",
+   "url": "https://aibvc.app/tournament/6aef3eadc6fe7b92c177bdf1"
   },
   "aibvc:6afc1cc7058b884cb17aa4ca": {
    "all_day": false,
@@ -272,9 +408,77 @@
    "summary": "AIBVC L2 M · Ibeach Arena Dabliu Colli D'oro",
    "url": "https://aibvc.app/tournament/6afdd1f485d127dbafe8a215"
   },
+  "aibvc:6aff6f24830a75a3e8f55954": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6aff6f24830a75a3e8f55954\n\nCircuito: AIBVC CNT L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 11/12/2026 12:00",
+   "end": "2026-12-13T14:00:00+01:00",
+   "hash": "ba6aff949fc5d089",
+   "info": {
+    "categorie": [
+     "CNT L2"
+    ],
+    "circuito": "CNT",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "F"
+    ],
+    "impianto": "Sport City Roma",
+    "indirizzo": "Via Álvaro del Portillo, 282",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6aff6f24830a75a3e8f55954"
+     }
+    ],
+    "nome": "CNT LAZIO - Sport City Roma",
+    "quota": 40,
+    "scadenza": "2026-12-11T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Sport City Roma, Via Álvaro del Portillo, 282, Roma",
+   "start": "2026-12-13T09:00:00+01:00",
+   "summary": "AIBVC CNT L2 F · CNT LAZIO - Sport City Roma",
+   "url": "https://aibvc.app/tournament/6aff6f24830a75a3e8f55954"
+  },
+  "aibvc:6aff6fdc830a75a3e8f55e99": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6aff6fdc830a75a3e8f55e99\n\nCircuito: AIBVC CNT L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 11/12/2026 12:00",
+   "end": "2026-12-13T19:00:00+01:00",
+   "hash": "1a2f04301454178a",
+   "info": {
+    "categorie": [
+     "CNT L2"
+    ],
+    "circuito": "CNT",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "M"
+    ],
+    "impianto": "Sport City Roma",
+    "indirizzo": "Via Álvaro del Portillo, 282",
+    "links": [
+     {
+      "genere": "M",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6aff6fdc830a75a3e8f55e99"
+     }
+    ],
+    "nome": "CNT LAZIO - Sport City Roma",
+    "quota": 40,
+    "scadenza": "2026-12-11T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Sport City Roma, Via Álvaro del Portillo, 282, Roma",
+   "start": "2026-12-13T14:00:00+01:00",
+   "summary": "AIBVC CNT L2 M · CNT LAZIO - Sport City Roma",
+   "url": "https://aibvc.app/tournament/6aff6fdc830a75a3e8f55e99"
+  },
   "clubseries:117340183b7ab561": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Eccellenza F G1-J: https://clubseries.app/campionato/tappa/655\n\nCircuito: AIBVC Club Series\nCategorie: Eccellenza F\nSquadre RBT: RBT SCHOOL Play Selva Candida\nEccellenza F G1-J – squadre: RBT SCHOOL Play Selva Candida, Beach Volley World, Hero Beach Volley Hero Blu, Ibeach Hotel Plaza Chianciano Terme, Paradise Beach City - Blu, Skyball Beach Volley School Skyball Grosseto\nIndirizzo: Via Licio Giorgieri, 50, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.8827,12.38828",
+   "description": "🔗 Dettaglio tappa:\n• Eccellenza F G1-J: https://clubseries.app/campionato/tappa/655\n\nCircuito: AIBVC Club Series\nCategorie: Eccellenza F\nSquadre RBT: RBT SCHOOL Play Selva Candida\nEccellenza F G1-J – squadre: RBT SCHOOL Play Selva Candida, Beach Volley World, Hero Beach Volley Blu, Ibeach Hotel Plaza Chianciano Terme, Paradise Beach City - Blu, Skyball Beach Volley School Skyball Grosseto\nIndirizzo: Via Licio Giorgieri, 50, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.8827,12.38828",
    "end": "2026-11-30",
    "hash": "ef272f89146e135c",
    "info": {
@@ -344,7 +548,7 @@
   },
   "clubseries:1f58c987c39b4b3f": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Over 40 F G1-D: https://clubseries.app/campionato/tappa/734\n• Over 40 F G1-E: https://clubseries.app/campionato/tappa/735\n\nCircuito: AIBVC Club Series\nCategorie: Over 40 F\nSquadre RBT: RBT SCHOOL Ellebi Viaggi e Turismo, RBT SCHOOL Fisiocipro\nOver 40 F G1-D – squadre: Hero Beach Volley Hero Blu, Paradise Beach City, RBT SCHOOL Fisiocipro\nOver 40 F G1-E – squadre: Beach Volley Academy, Hero Beach Volley Hero Rossa, RBT SCHOOL Ellebi Viaggi e Turismo, We Beach Club DE IAPINIS\nIndirizzo: Viale Egeo, 98, ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.828894,12.454359",
+   "description": "🔗 Dettaglio tappa:\n• Over 40 F G1-D: https://clubseries.app/campionato/tappa/734\n• Over 40 F G1-E: https://clubseries.app/campionato/tappa/735\n\nCircuito: AIBVC Club Series\nCategorie: Over 40 F\nSquadre RBT: RBT SCHOOL Ellebi Viaggi e Turismo, RBT SCHOOL Fisiocipro\nOver 40 F G1-D – squadre: Hero Beach Volley Blu, Paradise Beach City, RBT SCHOOL Fisiocipro\nOver 40 F G1-E – squadre: Beach Volley Academy, Hero Beach Volley Rossa, RBT SCHOOL Ellebi Viaggi e Turismo, We Beach Club DE IAPINIS\nIndirizzo: Viale Egeo, 98, ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.828894,12.454359",
    "end": "2026-11-23",
    "hash": "6cecd3f31e77642a",
    "info": {
@@ -385,7 +589,7 @@
   },
   "clubseries:2fc8c37674c02bac": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Over 35 F G1-D: https://clubseries.app/campionato/tappa/724\n\nCircuito: AIBVC Club Series\nCategorie: Over 35 F\nSquadre RBT: RBT SCHOOL Mamasole Drink e Food\nOver 35 F G1-D – squadre: Hero Beach Volley Hero Rossa, BAMBOO BEACH VOLLEY S.S.D.A.R.L., RBT SCHOOL Mamasole Drink e Food, Beach Volley Zone Roma Integral System\nIndirizzo: Viale Egeo, 98, ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.828894,12.454359",
+   "description": "🔗 Dettaglio tappa:\n• Over 35 F G1-D: https://clubseries.app/campionato/tappa/724\n\nCircuito: AIBVC Club Series\nCategorie: Over 35 F\nSquadre RBT: RBT SCHOOL Mamasole Drink e Food\nOver 35 F G1-D – squadre: Hero Beach Volley Rossa, BAMBOO BEACH VOLLEY S.S.D.A.R.L., RBT SCHOOL Mamasole Drink e Food, Beach Volley Zone Roma Integral System\nIndirizzo: Viale Egeo, 98, ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.828894,12.454359",
    "end": "2026-11-22",
    "hash": "be1bb0173ab5eabb",
    "info": {
@@ -455,7 +659,7 @@
   },
   "clubseries:448559236aacdf71": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Over 50 M G1-D: https://clubseries.app/campionato/tappa/756\n\nCircuito: AIBVC Club Series\nCategorie: Over 50 M\nSquadre RBT: RBT SCHOOL Teti Arredamenti, RBT SCHOOL Teti Arredamenti Gruppo Febal\nOver 50 M G1-D – squadre: Beach Volley Academy, Hero Beach Volley Hero Blu, RBT SCHOOL Teti Arredamenti, RBT SCHOOL Teti Arredamenti Gruppo Febal, Ibeach Share My Boat, We Beach Club IBILL\nIndirizzo: Via Licio Giorgieri, 50, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.8827,12.38828",
+   "description": "🔗 Dettaglio tappa:\n• Over 50 M G1-D: https://clubseries.app/campionato/tappa/756\n\nCircuito: AIBVC Club Series\nCategorie: Over 50 M\nSquadre RBT: RBT SCHOOL Teti Arredamenti, RBT SCHOOL Teti Arredamenti Gruppo Febal\nOver 50 M G1-D – squadre: Beach Volley Academy, Hero Beach Volley Blu, RBT SCHOOL Teti Arredamenti, RBT SCHOOL Teti Arredamenti Gruppo Febal, Ibeach Share My Boat, We Beach Club IBILL\nIndirizzo: Via Licio Giorgieri, 50, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.8827,12.38828",
    "end": "2026-11-22",
    "hash": "37d31eb1228a39ea",
    "info": {
@@ -533,7 +737,7 @@
   },
   "clubseries:688959cd018ecaf4": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Serie C M G1-H: https://clubseries.app/campionato/tappa/639\n\nCircuito: AIBVC Club Series\nCategorie: Serie C M\nSquadre RBT: RBT SCHOOL Buena Onda\nSerie C M G1-H – squadre: Beach Volley Academy, Hero Beach Volley Hero Blu, OBEYA SIR Safety Perugia, Paradise Beach City - Paradisus Performance Lab, RBT SCHOOL Buena Onda\nIndirizzo: Via del Fosso di Dragoncello, 201, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.753072,12.331781",
+   "description": "🔗 Dettaglio tappa:\n• Serie C M G1-H: https://clubseries.app/campionato/tappa/639\n\nCircuito: AIBVC Club Series\nCategorie: Serie C M\nSquadre RBT: RBT SCHOOL Buena Onda\nSerie C M G1-H – squadre: Beach Volley Academy, Hero Beach Volley Blu, OBEYA SIR Safety Perugia, Paradise Beach City - Paradisus Performance Lab, RBT SCHOOL Buena Onda\nIndirizzo: Via del Fosso di Dragoncello, 201, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.753072,12.331781",
    "end": "2026-11-30",
    "hash": "626dd7168e1363f5",
    "info": {
@@ -568,7 +772,7 @@
   },
   "clubseries:69b0f4af966a38a6": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Over 35 F G1-E: https://clubseries.app/campionato/tappa/725\n\nCircuito: AIBVC Club Series\nCategorie: Over 35 F\nSquadre RBT: RBT SCHOOL Ellebi Viaggi e Turismo\nOver 35 F G1-E – squadre: Beach Volley Academy, Urban Beach Ed Pro Roma, Hero Beach Volley Hero Blu, RBT SCHOOL Ellebi Viaggi e Turismo, Ibeach Share My Boat\nIndirizzo: via Busto Arsizio, 31, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.996787,12.474509",
+   "description": "🔗 Dettaglio tappa:\n• Over 35 F G1-E: https://clubseries.app/campionato/tappa/725\n\nCircuito: AIBVC Club Series\nCategorie: Over 35 F\nSquadre RBT: RBT SCHOOL Ellebi Viaggi e Turismo\nOver 35 F G1-E – squadre: Beach Volley Academy, Urban Beach Ed Pro Roma, Hero Beach Volley Blu, RBT SCHOOL Ellebi Viaggi e Turismo, Ibeach Share My Boat\nIndirizzo: via Busto Arsizio, 31, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.996787,12.474509",
    "end": "2026-11-23",
    "hash": "fdd4121785ef1026",
    "info": {
@@ -638,7 +842,7 @@
   },
   "clubseries:7801b5a546cc2e11": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Promozione M G1-AC: https://clubseries.app/campionato/tappa/582\n\nCircuito: AIBVC Club Series\nCategorie: Promozione M\nSquadre RBT: RBT SCHOOL Pinetina Ostia\nPromozione M G1-AC – squadre: Ibeach Albos Club Fregene, Alfabravo, Beach Volley Terni BLU, Hero Beach Volley Hero Blu, Beach Volley Zone Professionisti Immobiliari, RBT SCHOOL Pinetina Ostia\nIndirizzo: Via Martiri Della Storta, 40, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.989147,12.408067",
+   "description": "🔗 Dettaglio tappa:\n• Promozione M G1-AC: https://clubseries.app/campionato/tappa/582\n\nCircuito: AIBVC Club Series\nCategorie: Promozione M\nSquadre RBT: RBT SCHOOL Pinetina Ostia\nPromozione M G1-AC – squadre: Ibeach Albos Club Fregene, Alfabravo, Beach Volley Terni BLU, Hero Beach Volley Blu, Beach Volley Zone Professionisti Immobiliari, RBT SCHOOL Pinetina Ostia\nIndirizzo: Via Martiri Della Storta, 40, Roma\nMappa: https://www.google.com/maps/search/?api=1&query=41.989147,12.408067",
    "end": "2026-11-23",
    "hash": "fbe9eb71941eadba",
    "info": {
@@ -743,7 +947,7 @@
   },
   "clubseries:9558432ec6d3c134": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Serie C F G1-G: https://clubseries.app/campionato/tappa/943\n\nCircuito: AIBVC Club Series\nCategorie: Serie C F\nSquadre RBT: RBT SCHOOL Havana Beach Focene\nSerie C F G1-G – squadre: Hero Beach Volley Hero Blu, Beach Volley Academy, Ibeach Hotel Plaza Chianciano Terme, Paradise Beach City - Paradisus Performance Lab, RBT SCHOOL Havana Beach Focene\nIndirizzo: Viale Egeo, 98, ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.828894,12.454359",
+   "description": "🔗 Dettaglio tappa:\n• Serie C F G1-G: https://clubseries.app/campionato/tappa/943\n\nCircuito: AIBVC Club Series\nCategorie: Serie C F\nSquadre RBT: RBT SCHOOL Havana Beach Focene\nSerie C F G1-G – squadre: Hero Beach Volley Blu, Beach Volley Academy, Ibeach Hotel Plaza Chianciano Terme, Paradise Beach City - Paradisus Performance Lab, RBT SCHOOL Havana Beach Focene\nIndirizzo: Viale Egeo, 98, ROMA\nMappa: https://www.google.com/maps/search/?api=1&query=41.828894,12.454359",
    "end": "2026-11-30",
    "hash": "5f23b761a00b7b71",
    "info": {
@@ -2303,5 +2507,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-19T16:40+01:00"
+ "ultimo_controllo": "2026-11-20T16:22+01:00"
 }
