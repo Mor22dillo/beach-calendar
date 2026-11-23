@@ -1602,45 +1602,6 @@
    "summary": "FIPAV Società · Bronze M+F · HERO SSD ARL",
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12591"
   },
-  "fipav:5da35702c2003538": {
-   "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Silver F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12649\n• Silver M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12648\n\nCircuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: ASD BEACH VOLLEY CAMP\nLocalità: Roma",
-   "end": "2026-11-30",
-   "hash": "6f3bebbc33ffc38d",
-   "info": {
-    "categorie": [
-     "Silver M+F"
-    ],
-    "circuito": "Società",
-    "citta": "Roma",
-    "fonte": "FIPAV",
-    "generi": [
-     "F",
-     "M"
-    ],
-    "impianto": "",
-    "indirizzo": "",
-    "links": [
-     {
-      "genere": "F",
-      "label": "Silver F",
-      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12649"
-     },
-     {
-      "genere": "M",
-      "label": "Silver M",
-      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12648"
-     }
-    ],
-    "nome": "ASD BEACH VOLLEY CAMP",
-    "organizzatore": "ASD BEACH VOLLEY CAMP",
-    "provincia": "Roma"
-   },
-   "location": "ASD BEACH VOLLEY CAMP, Roma",
-   "start": "2026-11-29",
-   "summary": "FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP",
-   "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12649"
-  },
   "fipav:617da556bb895cf4": {
    "all_day": true,
    "description": "🔗 Dettaglio tappa:\n• Silver F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12525\n• Silver M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12526\n\nCircuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: BEACH VOLLEY ZONE S.S.D.A R.L.\nLocalità: Roma",
@@ -1907,6 +1868,45 @@
    "start": "2027-01-10",
    "summary": "FIPAV Società · Beginners M+F · BEACH VOLLEY ZONE S.S.D.A R.L.",
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2027/BVLF12528"
+  },
+  "fipav:8bd9bab19503e599": {
+   "all_day": true,
+   "description": "🔗 Dettaglio tappa:\n• Silver F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12649\n• Silver M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12648\n\nCircuito: FIPAV – Società\nCategorie: Silver M+F\nOrganizzatore: ASD BEACH VOLLEY CAMP\nLocalità: Roma",
+   "end": "2026-11-30",
+   "hash": "6f3bebbc33ffc38d",
+   "info": {
+    "categorie": [
+     "Silver M+F"
+    ],
+    "circuito": "Società",
+    "citta": "Roma",
+    "fonte": "FIPAV",
+    "generi": [
+     "F",
+     "M"
+    ],
+    "impianto": "",
+    "indirizzo": "",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Silver F",
+      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12649"
+     },
+     {
+      "genere": "M",
+      "label": "Silver M",
+      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12648"
+     }
+    ],
+    "nome": "ASD BEACH VOLLEY CAMP",
+    "organizzatore": "ASD BEACH VOLLEY CAMP",
+    "provincia": "Roma"
+   },
+   "location": "ASD BEACH VOLLEY CAMP, Roma",
+   "start": "2026-11-29",
+   "summary": "FIPAV Società · Silver M+F · ASD BEACH VOLLEY CAMP",
+   "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12649"
   },
   "fipav:8d0386b2c4667b0f": {
    "all_day": true,
@@ -2507,5 +2507,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-22T15:30+01:00"
+ "ultimo_controllo": "2026-11-23T18:58+01:00"
 }
