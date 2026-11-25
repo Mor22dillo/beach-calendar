@@ -1279,21 +1279,18 @@
   },
   "fipav:3036e55a0599c99c": {
    "all_day": true,
-   "description": "🔗 Dettaglio tappa:\n• Master 35 F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12573\n• Master 45 M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12574\n• Master 55 M: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12575\n\nCircuito: FIPAV – Società\nCategorie: Master 35 F, Master 45 M, Master 55 M\nOrganizzatore: ASD ROMABEACHTOUR\nLocalità: Roma",
+   "description": "🔗 Dettaglio tappa:\n• Master 35 F: https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12573\n\nCircuito: FIPAV – Società\nCategorie: Master 35 F\nOrganizzatore: ASD ROMABEACHTOUR\nLocalità: Roma",
    "end": "2026-11-29",
-   "hash": "0af5d5c44fde1305",
+   "hash": "048858e6eebf4097",
    "info": {
     "categorie": [
-     "Master 35 F",
-     "Master 45 M",
-     "Master 55 M"
+     "Master 35 F"
     ],
     "circuito": "Società",
     "citta": "Roma",
     "fonte": "FIPAV",
     "generi": [
-     "F",
-     "M"
+     "F"
     ],
     "impianto": "",
     "indirizzo": "",
@@ -1302,16 +1299,6 @@
       "genere": "F",
       "label": "Master 35 F",
       "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12573"
-     },
-     {
-      "genere": "M",
-      "label": "Master 45 M",
-      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12574"
-     },
-     {
-      "genere": "M",
-      "label": "Master 55 M",
-      "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLM12575"
      }
     ],
     "nome": "ASD ROMABEACHTOUR",
@@ -1320,7 +1307,7 @@
    },
    "location": "ASD ROMABEACHTOUR, Roma",
    "start": "2026-11-28",
-   "summary": "FIPAV Società · Master 35 F, Master 45 M, Master 55 M · ASD ROMABEACHTOUR",
+   "summary": "FIPAV Società · Master 35 F · ASD ROMABEACHTOUR",
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12573"
   },
   "fipav:3839bacad6b790da": {
@@ -2507,5 +2494,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-24T18:36+01:00"
+ "ultimo_controllo": "2026-11-25T18:08+01:00"
 }
