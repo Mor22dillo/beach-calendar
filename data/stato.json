@@ -204,6 +204,74 @@
    "summary": "AIBVC L1 F · Palaibeach Casetta Bianca",
    "url": "https://aibvc.app/tournament/6ad5dc61352fd41bfd6a3d42"
   },
+  "aibvc:6aeb07a53819c80d0024a036": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6aeb07a53819c80d0024a036\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 18/12/2026 12:00",
+   "end": "2026-12-20T22:22:00+01:00",
+   "hash": "052d15742f9c890a",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "M"
+    ],
+    "impianto": "Ibeach Arena Dabliu",
+    "indirizzo": "via Busto Arsizio, 31",
+    "links": [
+     {
+      "genere": "M",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6aeb07a53819c80d0024a036"
+     }
+    ],
+    "nome": "Ibeach Arena Dabliu Colli D'oro",
+    "quota": 40,
+    "scadenza": "2026-12-18T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Ibeach Arena Dabliu, via Busto Arsizio, 31, Roma",
+   "start": "2026-12-20T14:00:00+01:00",
+   "summary": "AIBVC L2 M · Ibeach Arena Dabliu Colli D'oro",
+   "url": "https://aibvc.app/tournament/6aeb07a53819c80d0024a036"
+  },
+  "aibvc:6aeb07b03819c80d0024ab9e": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6aeb07b03819c80d0024ab9e\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 18/12/2026 12:00",
+   "end": "2026-12-20T22:22:00+01:00",
+   "hash": "19746fbbaaafa1fb",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "F"
+    ],
+    "impianto": "Ibeach Arena Dabliu",
+    "indirizzo": "via Busto Arsizio, 31",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6aeb07b03819c80d0024ab9e"
+     }
+    ],
+    "nome": "Ibeach Arena Dabliu Colli D'oro",
+    "quota": 40,
+    "scadenza": "2026-12-18T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "Ibeach Arena Dabliu, via Busto Arsizio, 31, Roma",
+   "start": "2026-12-20T09:30:00+01:00",
+   "summary": "AIBVC L2 F · Ibeach Arena Dabliu Colli D'oro",
+   "url": "https://aibvc.app/tournament/6aeb07b03819c80d0024ab9e"
+  },
   "aibvc:6aef3e61c6fe7b92c1779092": {
    "all_day": false,
    "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6aef3e61c6fe7b92c1779092\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 06/12/2026 12:00",
@@ -271,6 +339,74 @@
    "start": "2026-12-08T14:00:00+01:00",
    "summary": "AIBVC L2 M · HERO - Dabliu Eur",
    "url": "https://aibvc.app/tournament/6aef3eadc6fe7b92c177bdf1"
+  },
+  "aibvc:6af31cb8f407309ba572fe33": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6af31cb8f407309ba572fe33\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 17/12/2026 12:00",
+   "end": "2026-12-19T21:00:00+01:00",
+   "hash": "63e55a25b62193f0",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "F"
+    ],
+    "impianto": "PalaBVA",
+    "indirizzo": "Via del Fosso di Dragoncello, 201",
+    "links": [
+     {
+      "genere": "F",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6af31cb8f407309ba572fe33"
+     }
+    ],
+    "nome": "PalaBVA",
+    "quota": 40,
+    "scadenza": "2026-12-17T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "PalaBVA, Via del Fosso di Dragoncello, 201, Roma",
+   "start": "2026-12-19T10:00:00+01:00",
+   "summary": "AIBVC L2 F · PalaBVA",
+   "url": "https://aibvc.app/tournament/6af31cb8f407309ba572fe33"
+  },
+  "aibvc:6af31cbef407309ba572fea8": {
+   "all_day": false,
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6af31cbef407309ba572fea8\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 17/12/2026 12:00",
+   "end": "2026-12-19T21:00:00+01:00",
+   "hash": "1ddda189b0404841",
+   "info": {
+    "categorie": [
+     "L2"
+    ],
+    "circuito": "L2",
+    "citta": "Roma",
+    "fonte": "AIBVC",
+    "generi": [
+     "M"
+    ],
+    "impianto": "PalaBVA",
+    "indirizzo": "Via del Fosso di Dragoncello, 201",
+    "links": [
+     {
+      "genere": "M",
+      "label": "Dettaglio torneo",
+      "url": "https://aibvc.app/tournament/6af31cbef407309ba572fea8"
+     }
+    ],
+    "nome": "PalaBVA",
+    "quota": 40,
+    "scadenza": "2026-12-17T12:00:00+01:00",
+    "sospeso": false
+   },
+   "location": "PalaBVA, Via del Fosso di Dragoncello, 201, Roma",
+   "start": "2026-12-19T12:00:00+01:00",
+   "summary": "AIBVC L2 M · PalaBVA",
+   "url": "https://aibvc.app/tournament/6af31cbef407309ba572fea8"
   },
   "aibvc:6afc1cc7058b884cb17aa4ca": {
    "all_day": false,
@@ -342,7 +478,7 @@
   },
   "aibvc:6afdd19785d127dbafe896bf": {
    "all_day": false,
-   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd19785d127dbafe896bf\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 27/11/2026 12:00",
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd19785d127dbafe896bf\n\nCircuito: AIBVC L2\nGenere: F\nQuota: 40 € / coppia\nScadenza iscrizioni: 28/11/2026 17:00",
    "end": "2026-11-29T22:22:00+01:00",
    "hash": "643ee403a90ec583",
    "info": {
@@ -366,7 +502,7 @@
     ],
     "nome": "Ibeach Arena Dabliu Colli D'oro",
     "quota": 40,
-    "scadenza": "2026-11-27T12:00:00+01:00",
+    "scadenza": "2026-11-28T17:00:00+01:00",
     "sospeso": false
    },
    "location": "Ibeach Arena Dabliu, via Busto Arsizio, 31, Roma",
@@ -376,7 +512,7 @@
   },
   "aibvc:6afdd1f485d127dbafe8a215": {
    "all_day": false,
-   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd1f485d127dbafe8a215\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 27/11/2026 12:00",
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd1f485d127dbafe8a215\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 27/11/2026 19:00",
    "end": "2026-11-29T22:22:00+01:00",
    "hash": "01c525af50d8820a",
    "info": {
@@ -400,7 +536,7 @@
     ],
     "nome": "Ibeach Arena Dabliu Colli D'oro",
     "quota": 40,
-    "scadenza": "2026-11-27T12:00:00+01:00",
+    "scadenza": "2026-11-27T19:00:00+01:00",
     "sospeso": false
    },
    "location": "Ibeach Arena Dabliu, via Busto Arsizio, 31, Roma",
@@ -2494,5 +2630,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-26T17:48+01:00"
+ "ultimo_controllo": "2026-11-27T17:34+01:00"
 }
