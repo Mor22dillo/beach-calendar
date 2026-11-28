@@ -512,7 +512,7 @@
   },
   "aibvc:6afdd1f485d127dbafe8a215": {
    "all_day": false,
-   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd1f485d127dbafe8a215\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 27/11/2026 19:00",
+   "description": "🔗 Dettaglio torneo: https://aibvc.app/tournament/6afdd1f485d127dbafe8a215\n\nCircuito: AIBVC L2\nGenere: M\nQuota: 40 € / coppia\nScadenza iscrizioni: 28/11/2026 13:00",
    "end": "2026-11-29T22:22:00+01:00",
    "hash": "01c525af50d8820a",
    "info": {
@@ -536,7 +536,7 @@
     ],
     "nome": "Ibeach Arena Dabliu Colli D'oro",
     "quota": 40,
-    "scadenza": "2026-11-27T19:00:00+01:00",
+    "scadenza": "2026-11-28T13:00:00+01:00",
     "sospeso": false
    },
    "location": "Ibeach Arena Dabliu, via Busto Arsizio, 31, Roma",
@@ -2630,5 +2630,5 @@
    "url": "https://www.federvolley.it/campionati/beach-volley/eventi#2026/BVLF12418"
   }
  },
- "ultimo_controllo": "2026-11-27T17:34+01:00"
+ "ultimo_controllo": "2026-11-28T16:26+01:00"
 }
